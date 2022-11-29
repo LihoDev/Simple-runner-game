@@ -8,7 +8,7 @@ namespace Props
     {
         [SerializeField, Min(2)] private int _lenght;
         [SerializeField] private Transform _prefab;
-        [SerializeField] private int _maxCountOnScene;
+        [SerializeField, Min(1)] private int _maxCountOnScene;
         [SerializeField] private Transform _player;
 
         private List<Transform> _instances = new List<Transform>();

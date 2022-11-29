@@ -5,8 +5,11 @@ using UnityEngine.EventSystems;
 
 namespace Player
 {
-    public class SwipeDetector : MonoBehaviour
+    public class SwipeDetector : MonoBehaviour, IDragHandler, IEndDragHandler
     {
+        [SerializeField] private SideMovement _sideMovement;
+        [SerializeField] private JumpMovement _jumpMovement;
+
         private enum DraggedDirection
         {
             Up,
@@ -15,11 +18,37 @@ namespace Player
             Left
         }
 
-        private void OnEndDrag(PointerEventData eventData)
+        public void OnEndDrag(PointerEventData eventData)
         {
+            if (_sideMovement == null)
+            {
+                Debug.LogError("EvasionsMovement missing!");
+                return;
+            }
+            if (_jumpMovement == null)
+            {
+                Debug.LogError("JumpMovement missing!");
+                return;
+            }
             Vector3 dragVectorDirection = (eventData.position - eventData.pressPosition).normalized;
-            GetDragDirection(dragVectorDirection);
+            switch (GetDragDirection(dragVectorDirection))
+            {
+                case DraggedDirection.Up:
+                    _jumpMovement.Jump();
+                    break;
+                case DraggedDirection.Down:
+                    _jumpMovement.MoveDown();
+                    break;
+                case DraggedDirection.Right:
+                    _sideMovement.MoveRight();
+                    break;
+                case DraggedDirection.Left:
+                    _sideMovement.MoveLeft();
+                    break;
+            }
         }
+
+        public void OnDrag(PointerEventData eventData) { }
 
         private DraggedDirection GetDragDirection(Vector3 dragVector)
         {
