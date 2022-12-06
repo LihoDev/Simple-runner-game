@@ -37,7 +37,7 @@ namespace Player
                     _jumpMovement.Jump();
                     break;
                 case DraggedDirection.Down:
-                    _jumpMovement.MoveDown();
+                    _jumpMovement.Down();
                     break;
                 case DraggedDirection.Right:
                     _sideMovement.MoveRight();
