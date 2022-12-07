@@ -6,6 +6,8 @@ namespace Player
 {
     public class JumpMovement : MonoBehaviour
     {
+        public bool Idle { get; private set; } = true;
+        
         [SerializeField] private float _moveDownSpeed = 0;
         [SerializeField] private AnimationCurve _upCurve;
         [SerializeField] private AnimationCurve _downCurve;
@@ -32,6 +34,7 @@ namespace Player
 
         private IEnumerator MoveUp(float startHeight)
         {
+            Idle = false;
             float time = 0;
             while (time < 1f)
             {
@@ -43,6 +46,7 @@ namespace Player
 
         private IEnumerator MoveDown(float speed)
         {
+            Idle = false;
             float time = 0;
             float startHeight = transform.position.y;
             float previousHieght = GetGroundHieght();
@@ -55,6 +59,7 @@ namespace Player
                 yield return null;
             }
             _moving = null;
+            Idle = true;
         }
 
         private IEnumerator MoveJumpCurve()

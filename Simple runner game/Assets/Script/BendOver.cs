@@ -2,32 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace Player
 {
     public class BendOver : MonoBehaviour
     {
-        [SerializeField, Min(0)] private float _bendOverTime;
-        [SerializeField] private Vector3 _bendOverCollisionSize;
+        public bool Idle { get; private set; } = true;
 
-        //private IEnumerator BendOver()
-        //{
-        //    if (_mesh != null)
-        //    {
-        //        _currentState = States.bendOver;
-        //        float time = 0;
-        //        _mesh.localScale = _bendOverCollisionSize;
-        //        while (time < _bendOverTime)
-        //        {
-        //            time += Time.deltaTime;
-        //            yield return null;
-        //        }
-        //        _mesh.localScale = Vector3.one;
-        //        _moving = null;
-        //        _currentState = States.idle;
-        //    }
-        //    else
-        //        Debug.LogError("Mesh missing");
-        //}
+        [SerializeField, Min(0)] private float _bendOverTime;
+        [SerializeField] private Vector3 _bendOverCollisionSize = Vector3.one;
+        [SerializeField] private Coroutine _active;
+
+        public void StartBendOver()
+        {
+            if (_active != null)
+                StopCoroutine(_active);
+            _active = StartCoroutine(Timer());
+        }
+
+        public void StopBendOver()
+        {
+            StopCoroutine(_active);
+            _active = null;
+            transform.localScale = Vector3.one;
+            Idle = true;
+        }
+
+        private IEnumerator Timer()
+        {
+            Idle = false;
+            float time = 0;
+            transform.localScale = _bendOverCollisionSize;
+            while (time < _bendOverTime)
+            {
+                time += Time.deltaTime;
+                yield return null;
+            }
+            StopBendOver();
+        }
     }
 }

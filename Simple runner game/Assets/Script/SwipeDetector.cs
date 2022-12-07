@@ -9,6 +9,7 @@ namespace Player
     {
         [SerializeField] private SideMovement _sideMovement;
         [SerializeField] private JumpMovement _jumpMovement;
+        [SerializeField] private BendOver _bendOver;
 
         private enum DraggedDirection
         {
@@ -30,14 +31,24 @@ namespace Player
                 Debug.LogError("JumpMovement missing!");
                 return;
             }
+            if (_bendOver == null)
+            {
+                Debug.LogError("BendOver missing!");
+                return;
+            }
             Vector3 dragVectorDirection = (eventData.position - eventData.pressPosition).normalized;
             switch (GetDragDirection(dragVectorDirection))
             {
                 case DraggedDirection.Up:
+                    if (!_bendOver.Idle)
+                        _bendOver.StopBendOver();
                     _jumpMovement.Jump();
                     break;
                 case DraggedDirection.Down:
-                    _jumpMovement.Down();
+                    if (_jumpMovement.Idle)
+                        _bendOver.StartBendOver();
+                    else
+                        _jumpMovement.Down();
                     break;
                 case DraggedDirection.Right:
                     _sideMovement.MoveRight();
