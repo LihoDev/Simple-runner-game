@@ -6,7 +6,7 @@ namespace Props
 {
     public class PropInstancer : MonoBehaviour
     {
-        [SerializeField] protected Transform _prefab;
+        [SerializeField] private List<Transform> _prefabs = new List<Transform>();
         [SerializeField, Min(2)] protected int _lenght;
         [SerializeField, Min(1)] protected int _maxCountOnScene;
         [SerializeField] protected Transform _player;
@@ -29,16 +29,20 @@ namespace Props
 
         protected virtual void InstantiatePrefabs()
         {
-            if (_prefab == null)
+            if (_prefabs.Count == 0)
             {
-                Debug.LogError("Prefab missing!");
+                Debug.LogError("Prefabs missing!");
                 return;
             }
             _lastSegmentPosition -= _lenght;
+            int prefabIndex = 0;
             for (var i = 0; i < _maxCountOnScene; i++)
             {
-                _instances.Add(Instantiate(_prefab, new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
+                _instances.Add(Instantiate(_prefabs[prefabIndex], new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
                 _lastSegmentPosition += _lenght;
+                prefabIndex++;
+                if (prefabIndex > _prefabs.Count - 1)
+                    prefabIndex = 0;
             }
         }
 
