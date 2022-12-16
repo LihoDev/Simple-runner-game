@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8967578977515190359}
-  - component: {fileID: 3322312787587681307}
+  - component: {fileID: 6726020858495167276}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -25,15 +25,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2406440786957729011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5304825980294786626}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &3322312787587681307
-MeshCollider:
+--- !u!65 &6726020858495167276
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -42,10 +42,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2336988006799662468, guid: 835077536d867bc46a6209c54729c7f8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.61965334, z: 4}
+  m_Center: {x: 0, y: -0.1598267, z: 0}
 --- !u!1 &4121949559008311607
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,5 +141,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5430312, y: 2.7655704, z: 4}
+  m_Size: {x: 4, y: 2.7655704, z: 4}
   m_Center: {x: 0, y: 1.3889064, z: 2}

@@ -15,6 +15,8 @@ namespace Player
         [SerializeField, Min(0)] private float _jumpHeight;
         [SerializeField, Min(0)] private Vector3 _rayIndent;
         [SerializeField] private LayerMask _ignoreLayer;
+        [SerializeField] private Transform _camera;
+        [SerializeField, Min(0)] private float _cameraMovingSpeed = 5;
 
         private Coroutine _moving;
 
@@ -36,6 +38,7 @@ namespace Player
         public void StopMoving()
         {
             StopAllCoroutines();
+            Idle = true;
         }
 
         private IEnumerator MoveUp(float startHeight)
@@ -45,13 +48,9 @@ namespace Player
             while (time < 1f)
             {
                 time += _jumpSpeed * Time.deltaTime;
-                float groundHeight = GetGroundHieght();
                 if (GetGroundHieght() > transform.localPosition.y)
                     break;
-                //startHeight = (groundHeight > transform.localPosition.y) ? groundHeight : startHeight;
-                //    Debug.Log(Mathf.Lerp(-2, 0, GetDistanceGround()));
-                DebugText.Show(groundHeight.ToString());
-                transform.localPosition = new Vector3(0, startHeight/*(rampOfset > transform.localPosition.y) ? rampOfset : startHeight*/ /*+ Mathf.Abs(Mathf.Lerp(-2, 0, GetDistanceGround())) */+ _jumpHeight * _upCurve.Evaluate(time), 0);
+                transform.localPosition = new Vector3(0, startHeight + _jumpHeight * _upCurve.Evaluate(time), 0);
                 yield return null;
             }
         }
@@ -78,8 +77,7 @@ namespace Player
         {
             float startHeight = transform.localPosition.y;
             yield return MoveUp(startHeight);
-            //if (GetDistanceGround() > 0)
-                yield return MoveDown(_jumpSpeed);
+            yield return MoveDown(_jumpSpeed);
         }
 
         private float GetDistanceGround()
@@ -99,7 +97,10 @@ namespace Player
         private void SetHeight()
         {
             if (RaycastDown(out RaycastHit hit))
+            {
                 gameObject.transform.position = hit.point;
+                _camera.transform.localPosition = Vector3.Lerp(_camera.transform.localPosition, new Vector3(0, hit.point.y, 0), _cameraMovingSpeed * Time.deltaTime);
+            }
         }
 
         private bool RaycastDown(out RaycastHit hit)

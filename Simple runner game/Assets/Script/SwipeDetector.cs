@@ -74,7 +74,7 @@ namespace Player
             {
                 draggedDir = (dragVector.y > 0) ? DraggedDirection.Up : DraggedDirection.Down;
             }
-            Debug.Log(draggedDir);
+            //Debug.Log(draggedDir);
             return draggedDir;
         }
     }
