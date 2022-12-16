@@ -15,6 +15,8 @@ namespace Player
         [SerializeField, Min(0)] private float _jumpHeight;
         [SerializeField, Min(0)] private Vector3 _rayIndent;
         [SerializeField] private LayerMask _ignoreLayer;
+        [SerializeField] private Transform _camera;
+        [SerializeField, Min(0)] private float _cameraMovingSpeed = 5;
 
         private Coroutine _moving;
 
@@ -95,7 +97,10 @@ namespace Player
         private void SetHeight()
         {
             if (RaycastDown(out RaycastHit hit))
+            {
                 gameObject.transform.position = hit.point;
+                _camera.transform.localPosition = Vector3.Lerp(_camera.transform.localPosition, new Vector3(0, hit.point.y, 0), _cameraMovingSpeed * Time.deltaTime);
+            }
         }
 
         private bool RaycastDown(out RaycastHit hit)
