@@ -12,6 +12,7 @@ namespace Player
         [SerializeField] private Transform _camera;
 
         private int _currentRoad = 0;
+        private int _previousRoad = 0;
         private Coroutine _transformMovement;
         private Coroutine _cameraMovement;
 
@@ -19,6 +20,7 @@ namespace Player
         {
             if (_currentRoad + 1 <= (_countRoad - 1) / 2 + 1)
             {
+                _previousRoad = _currentRoad;
                 _currentRoad++;
                 StartMovement();
             }
@@ -28,6 +30,7 @@ namespace Player
         {
             if (_currentRoad - 1 >= -((_countRoad - 1) / 2 + 1))
             {
+                _previousRoad = _currentRoad;
                 _currentRoad--;
                 StartMovement();
             }
@@ -36,6 +39,12 @@ namespace Player
         public void StopMoving()
         {
             StopAllCoroutines();
+        }
+
+        public void AbortMoving()
+        {
+            _currentRoad = _previousRoad;
+            StartMovement();
         }
 
         private void StartMovement()

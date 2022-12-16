@@ -7,13 +7,27 @@ namespace Player
     public class CollisionDetector : MonoBehaviour
     {
         [SerializeField] private GameLauncher _gameLauncher;
+        [SerializeField] private SideMovement _sideMovement;
         [SerializeField] private LayerMask _layer;
+        [SerializeField] private float maxDistanceToGameOver = 1.2f;
 
-        private void OnTriggerEnter(Collider other)
+        private int _touchCount = 0;
+
+        private void OnTriggerEnter(Collider collider)
         {
-            if ((_layer.value & (1 << other.transform.gameObject.layer)) > 0)
+            if ((_layer.value & (1 << collider.transform.gameObject.layer)) > 0)
             {
-                _gameLauncher.StopGame();
+                float obstaclePosition = collider.transform.position.x;
+                if (Mathf.Abs(obstaclePosition - transform.position.x) < maxDistanceToGameOver || _touchCount + 1 > 1)
+                {
+                    _gameLauncher.StopGame();
+                }
+                else
+                {
+                    _sideMovement.AbortMoving();
+                    _touchCount++;
+                    DebugText.Show(_touchCount.ToString());
+                }
             }
         }
     }

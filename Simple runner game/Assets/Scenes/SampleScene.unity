@@ -758,9 +758,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameLauncher: {fileID: 432186160}
+  _sideMovement: {fileID: 1689938035}
   _layer:
     serializedVersion: 2
     m_Bits: 64
+  maxDistanceToGameOver: 1.2
 --- !u!54 &339262691
 Rigidbody:
   m_ObjectHideFlags: 0
