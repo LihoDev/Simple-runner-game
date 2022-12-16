@@ -33,6 +33,11 @@ namespace Player
             }
         }
 
+        public void StopMoving()
+        {
+            StopAllCoroutines();
+        }
+
         private void StartMovement()
         {
             if (_transformMovement != null)

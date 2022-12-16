@@ -14,6 +14,7 @@ namespace Player
         [SerializeField, Min(0)] private float _jumpSpeed;
         [SerializeField, Min(0)] private float _jumpHeight;
         [SerializeField, Min(0)] private Vector3 _rayIndent;
+        [SerializeField] private LayerMask _ignoreLayer;
 
         private Coroutine _moving;
 
@@ -32,6 +33,11 @@ namespace Player
             }
         }
 
+        public void StopMoving()
+        {
+            StopAllCoroutines();
+        }
+
         private IEnumerator MoveUp(float startHeight)
         {
             Idle = false;
@@ -39,7 +45,13 @@ namespace Player
             while (time < 1f)
             {
                 time += _jumpSpeed * Time.deltaTime;
-                transform.localPosition = new Vector3(0, startHeight + _jumpHeight * _upCurve.Evaluate(time), 0);
+                float groundHeight = GetGroundHieght();
+                if (GetGroundHieght() > transform.localPosition.y)
+                    break;
+                //startHeight = (groundHeight > transform.localPosition.y) ? groundHeight : startHeight;
+                //    Debug.Log(Mathf.Lerp(-2, 0, GetDistanceGround()));
+                DebugText.Show(groundHeight.ToString());
+                transform.localPosition = new Vector3(0, startHeight/*(rampOfset > transform.localPosition.y) ? rampOfset : startHeight*/ /*+ Mathf.Abs(Mathf.Lerp(-2, 0, GetDistanceGround())) */+ _jumpHeight * _upCurve.Evaluate(time), 0);
                 yield return null;
             }
         }
@@ -66,27 +78,33 @@ namespace Player
         {
             float startHeight = transform.localPosition.y;
             yield return MoveUp(startHeight);
-            yield return MoveDown(_jumpSpeed);
+            //if (GetDistanceGround() > 0)
+                yield return MoveDown(_jumpSpeed);
         }
 
         private float GetDistanceGround()
         {
-            if (Physics.Raycast(transform.position + _rayIndent, -transform.up, out RaycastHit hit) && hit.collider != null)
+            if (RaycastDown(out RaycastHit hit))
                 return Vector3.Distance(transform.position, hit.point) * ((hit.point.y > transform.position.y) ? -1 : 1);
             return 0;
         }
 
         private float GetGroundHieght()
         {
-            if (Physics.Raycast(transform.position + _rayIndent, -transform.up, out RaycastHit hit) && hit.collider != null)
+            if (RaycastDown(out RaycastHit hit))
                 return hit.point.y;
             return 0;
         }
 
         private void SetHeight()
         {
-            if (Physics.Raycast(transform.position + _rayIndent, -transform.up, out RaycastHit hit) && hit.collider != null)
+            if (RaycastDown(out RaycastHit hit))
                 gameObject.transform.position = hit.point;
+        }
+
+        private bool RaycastDown(out RaycastHit hit)
+        {
+            return Physics.Raycast(new Ray(transform.position + _rayIndent, -transform.up), out hit, 1000f, ~_ignoreLayer) && hit.collider != null;
         }
 
         private void Update()
