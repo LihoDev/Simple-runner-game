@@ -8,6 +8,7 @@ namespace Player
         [SerializeField] private float _speed = 0;
         [SerializeField, Min(1)] private int _sideJumpDistance = 1;
         [SerializeField, Min(1)] private int _countRoad;
+        [SerializeField] private float _cameraOffset = 1;
         [SerializeField] private Transform _camera;
 
         private int _currentRoad = 0;
@@ -32,15 +33,19 @@ namespace Player
             }
         }
 
+        public void StopMoving()
+        {
+            StopAllCoroutines();
+        }
+
         private void StartMovement()
         {
             if (_transformMovement != null)
-            {
                 StopCoroutine(_transformMovement);
+            if (_cameraMovement != null)
                 StopCoroutine(_cameraMovement);
-            }
             _transformMovement = StartCoroutine(MoveToTarget(transform, new Vector3(_currentRoad * _sideJumpDistance, 0, 0)));
-            _cameraMovement = StartCoroutine(MoveToTarget(_camera, new Vector3(_currentRoad * _sideJumpDistance - (_sideJumpDistance / 2) * _currentRoad, _camera.localPosition.y, _camera.localPosition.z)));
+            _cameraMovement = StartCoroutine(MoveToTarget(_camera, new Vector3(_currentRoad * _sideJumpDistance - (_sideJumpDistance / 2) * _currentRoad / _cameraOffset, _camera.localPosition.y, _camera.localPosition.z)));
         }
 
         private IEnumerator MoveToTarget(Transform moveObject, Vector3 target)
