@@ -25,6 +25,9 @@
     "texturesets": {
         "Base material": {
             "shader": "Main shader"
+        },
+        "Collider": {
+            "shader": "Main shader"
         }
     }
 }

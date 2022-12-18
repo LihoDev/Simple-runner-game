@@ -6,7 +6,7 @@ namespace Player
 {
     public class CollisionDetector : MonoBehaviour
     {
-        [SerializeField] private GameLauncher _gameLauncher;
+        [SerializeField] private RunnerLauncher _runnerLauncher;
         [SerializeField] private SideMovement _sideMovement;
         [SerializeField] private LayerMask _layer;
         [SerializeField] private float maxDistanceToGameOver = 1.2f;
@@ -20,13 +20,13 @@ namespace Player
                 float obstaclePosition = collider.transform.position.x;
                 if (Mathf.Abs(obstaclePosition - transform.position.x) < maxDistanceToGameOver || _touchCount + 1 > 1)
                 {
-                    _gameLauncher.StopGame();
+                    _runnerLauncher.StopRun();
                 }
                 else
                 {
                     _sideMovement.AbortMoving();
                     _touchCount++;
-                    DebugText.Show(_touchCount.ToString());
+                    //DebugText.Show(_touchCount.ToString());
                 }
             }
         }
