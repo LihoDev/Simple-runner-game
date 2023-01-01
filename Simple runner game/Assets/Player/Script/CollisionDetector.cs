@@ -8,6 +8,7 @@ namespace Player
     {
         [SerializeField] private RunnerLauncher _runnerLauncher;
         [SerializeField] private SideMovement _sideMovement;
+        [SerializeField] private Shaker _shaker;
         [SerializeField] private LayerMask _layer;
         [SerializeField] private float maxDistanceToGameOver = 1.2f;
 
@@ -26,8 +27,8 @@ namespace Player
                 {
                     _sideMovement.AbortMoving();
                     _touchCount++;
-                    //DebugText.Show(_touchCount.ToString());
                 }
+                _shaker.StartShake();
             }
         }
     }
