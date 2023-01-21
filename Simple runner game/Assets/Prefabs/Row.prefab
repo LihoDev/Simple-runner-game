@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3414974853590335264}
   - component: {fileID: 3414974853590335265}
   m_Layer: 0
-  m_Name: Random Wall
+  m_Name: Row
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -44,22 +44,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf3c68bfbf228c488325cdc059396a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinPrefab: {fileID: 974131939943459245, guid: 999f9b669ce889a41ba5ee4cbe3228c0,
-    type: 3}
-  _maxCoinOnScene: 20
-  _coinFrequency: 2
-  _coinHieghtOnCar: 3.5
-  _maxCoinLineLength: 20
-  _aislesPrefabs:
-  - {fileID: 3754206240859706481, guid: df7dae558ad91a946b7855993f60b462, type: 3}
-  - {fileID: 922653235308232371, guid: 5a945726b70034b4b9cd5916fc2fae66, type: 3}
-  _deadEndsPrefabs:
-  - {fileID: 2900829762778124062, guid: 1f61b9e6452558b4684289ef12e125ca, type: 3}
-  _carsPrefabs:
-  - {fileID: 5304825980294786626, guid: bbc64a18d2e08c449b991d37f54b5918, type: 3}
-  _rampPrefab: {fileID: 5509630301206632685, guid: ca087f95398de0a4e85a912dd23de071,
-    type: 3}
-  _roadWidth: 4
-  _countRoad: 3
-  _maxTrainLength: 5
-  _carLength: 4

@@ -6,15 +6,18 @@ namespace Props
 {
     public class PropInstancer : MonoBehaviour
     {
-        [SerializeField] private List<Transform> _prefabs = new List<Transform>();
-        [SerializeField, Min(2)] protected int _lenght;
-        [SerializeField, Min(1)] protected int _maxCountOnScene;
+        [SerializeField, Min(1)] protected int _lenght;
+        [SerializeField, Min(0)] private int _fierstIndent = 0;
         [SerializeField] protected Transform _player;
-
         protected List<Transform> _instances = new List<Transform>();
         protected int _fierstSegmentIndex = 0;
         protected int _lastSegmentPosition = 0;
         protected int _oldPlayerDistance = 0;
+
+        [SerializeField] private List<Transform> _prefabs = new List<Transform>();
+        [SerializeField, Min(1)] private int _countFront;
+        [SerializeField, Min(1)] private int _countRear;
+        private int MaxCountOnScene { get => _countFront + _countRear; }
 
         protected virtual void Start()
         {
@@ -24,7 +27,8 @@ namespace Props
                 Debug.LogError("Player missing!");
                 return;
             }
-            _oldPlayerDistance = _lastSegmentPosition - (_maxCountOnScene * _lenght) + _lenght;
+            _oldPlayerDistance = _fierstIndent + (_lenght * _countRear);
+            //_oldPlayerDistance = _lastSegmentPosition - (MaxCountOnScene * _lenght) + _lenght;
         }
 
         protected virtual void InstantiatePrefabs()
@@ -34,12 +38,15 @@ namespace Props
                 Debug.LogError("Prefabs missing!");
                 return;
             }
-            _lastSegmentPosition -= _lenght;
+            _lastSegmentPosition = _fierstIndent;
+            //_lastSegmentPosition -= _lenght;
             int prefabIndex = 0;
-            for (var i = 0; i < _maxCountOnScene; i++)
+            for (var i = 0; i < MaxCountOnScene; i++)
             {
                 _instances.Add(Instantiate(_prefabs[prefabIndex], new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
                 _lastSegmentPosition += _lenght;
+                Show();
+                MoveSegmentIndex();
                 prefabIndex++;
                 if (prefabIndex > _prefabs.Count - 1)
                     prefabIndex = 0;
@@ -50,17 +57,28 @@ namespace Props
         {
             if (_player.position.z - _oldPlayerDistance > _lenght)
             {
-                MoveLastSegment();
-                _oldPlayerDistance = _lastSegmentPosition - (_maxCountOnScene * _lenght) + _lenght;
+                PlaceProps();
+                Show();
+                _oldPlayerDistance = _lastSegmentPosition - (_countFront * _lenght) + _lenght;
+                MoveSegmentIndex();
             }
         }
 
-        protected virtual void MoveLastSegment()
+        protected virtual void Show()
+        {
+
+        }
+
+        protected virtual void PlaceProps()
         {
             _instances[_fierstSegmentIndex].position = new Vector3(0, 0, _lastSegmentPosition);
             _lastSegmentPosition += _lenght;
+        }
+
+        private void MoveSegmentIndex()
+        {
             _fierstSegmentIndex++;
-            if (_fierstSegmentIndex > _instances.Count - 1)
+            if (_fierstSegmentIndex == _instances.Count)
                 _fierstSegmentIndex = 0;
         }
     }
