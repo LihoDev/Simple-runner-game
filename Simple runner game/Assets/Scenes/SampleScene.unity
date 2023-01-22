@@ -1563,7 +1563,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 339262684}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -2045,9 +2045,9 @@ GameObject:
   - component: {fileID: 432186157}
   - component: {fileID: 432186156}
   - component: {fileID: 432186158}
-  - component: {fileID: 432186159}
   - component: {fileID: 432186160}
   - component: {fileID: 432186161}
+  - component: {fileID: 432186162}
   m_Layer: 0
   m_Name: Level Generator
   m_TagString: Untagged
@@ -2148,36 +2148,6 @@ MonoBehaviour:
     m_RotationOrder: 4
   _speed: 0.01
   _curveXProperty: _CurveX
---- !u!114 &432186159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432186155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 007b58386f5e1de4a89a91a0366ecb57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _length: 1
-  _player: {fileID: 1689938035}
-  _fierstIndent: 20
-  _prefabs:
-  - {fileID: 3414974853590335264, guid: dd8fa17a44d6ac947818f48c177a5b9a, type: 3}
-  _countFront: 40
-  _countRear: 12
-  _platformPrefabs:
-  - {fileID: 11400000, guid: 8d5d98e9712f42f498d803df1badc0bb, type: 2}
-  - {fileID: 11400000, guid: b7fac3fbe489afe4f9a52b78b2cdc500, type: 2}
-  _maxCountPlatform: 40
-  _obstaclePrefabs: []
-  _maxCountObstacle: 40
-  _changeWayFrequency: 10
-  _minWayLength: 10
-  _minTurnLength: 10
-  _roadWidth: 4
-  _countRoad: 3
 --- !u!114 &432186160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,6 +2198,44 @@ MonoBehaviour:
   _scoreKey: Score
   _musicVolumeKey: Music
   _soundEffectsVolumeKey: SoundEffects
+--- !u!114 &432186162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432186155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007b58386f5e1de4a89a91a0366ecb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _length: 1
+  _player: {fileID: 1689938035}
+  _fierstIndent: 20
+  _prefabs:
+  - {fileID: 3414974853590335264, guid: dd8fa17a44d6ac947818f48c177a5b9a, type: 3}
+  _countFront: 40
+  _countRear: 12
+  _platformPrefabs:
+  - {fileID: 11400000, guid: 8d5d98e9712f42f498d803df1badc0bb, type: 2}
+  - {fileID: 11400000, guid: b7fac3fbe489afe4f9a52b78b2cdc500, type: 2}
+  _maxCountPlatform: 40
+  _obstaclePrefabs:
+  - {fileID: 11400000, guid: 59e81ff32fc403c4da26ea3159d42120, type: 2}
+  - {fileID: 11400000, guid: d86132fee320c8844995e982fa67b4c0, type: 2}
+  _maxCountObstacle: 40
+  _rampPrefabs:
+  - {fileID: 11400000, guid: 0b111cfce939f894fb5f29eb55f0a96c, type: 2}
+  _maxCountRamp: 5
+  _changeWayFrequency: 10
+  _rampFrequency: 10
+  _obstacleFrequency: 10
+  _obstacleMinDistance: 15
+  _minWayLength: 10
+  _minTurnLength: 10
+  _roadWidth: 4
+  _countRoad: 3
 --- !u!1 &465738818
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9171791625805814112}
   - component: {fileID: 6967378841980943355}
   - component: {fileID: 2177721053357339864}
+  - component: {fileID: -942053634104808371}
   m_Layer: 6
   m_Name: Wall_jump
   m_TagString: Untagged
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 1.0012392, z: 0.29649228}
   m_Center: {x: 0, y: 0.5006196, z: 0}
+--- !u!114 &-942053634104808371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6351166221264260573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe9534140c3b3a408b13e6234c7052c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _properties: {fileID: 11400000, guid: d86132fee320c8844995e982fa67b4c0, type: 2}

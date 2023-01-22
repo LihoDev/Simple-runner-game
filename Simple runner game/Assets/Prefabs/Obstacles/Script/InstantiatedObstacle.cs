@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class InstantiatedObstacle : MonoBehaviour
 {
-    public Obstacle Properties { get => _properties; private set { _properties = value; } }
-    [SerializeField] private Obstacle _properties;
+    public ObstacleProperties Properties { get => _properties; private set { _properties = value; } }
+    [SerializeField] private ObstacleProperties _properties;
 }

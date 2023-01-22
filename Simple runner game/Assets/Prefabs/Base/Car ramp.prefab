@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 7017717183627364393}
   - component: {fileID: 999468231649322095}
   - component: {fileID: 7051289713842210459}
+  - component: {fileID: 3664350027187828522}
   m_Layer: 6
   m_Name: Car ramp
   m_TagString: Untagged
@@ -145,3 +146,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4486548967187540679, guid: 835077536d867bc46a6209c54729c7f8, type: 3}
+--- !u!114 &3664350027187828522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649303126788492692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921f68f877ea546419ab2eea381f21b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _properties: {fileID: 11400000, guid: 0b111cfce939f894fb5f29eb55f0a96c, type: 2}
