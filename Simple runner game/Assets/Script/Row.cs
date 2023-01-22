@@ -10,6 +10,7 @@ namespace Obstacles
         public List<InstantiatedObstacle> Obstacles { get; set; } = new List<InstantiatedObstacle>();
         public List<InstantiatedObstacle> Coins { get; set; } = new List<InstantiatedObstacle>();
 
+        public bool turn = false;
 
         //[SerializeField] private Transform _coinPrefab;
         //[SerializeField, Min(0)] private int _maxCoinOnScene;

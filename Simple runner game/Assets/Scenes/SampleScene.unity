@@ -1563,7 +1563,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 339262684}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -2067,9 +2067,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a911c66d42d1ce4c86ab155f72fb283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lenght: 20
-  _fierstIndent: 0
+  _length: 0
   _player: {fileID: 1166814715}
+  _fierstIndent: 0
   _prefabs:
   - {fileID: 1946136053357180331, guid: e4a14087d44082943949ef6889fc57c9, type: 3}
   _countFront: 0
@@ -2160,20 +2160,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007b58386f5e1de4a89a91a0366ecb57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lenght: 1
-  _fierstIndent: 10
-  _player: {fileID: 1166814715}
+  _length: 1
+  _player: {fileID: 1689938035}
+  _fierstIndent: 20
   _prefabs:
   - {fileID: 3414974853590335264, guid: dd8fa17a44d6ac947818f48c177a5b9a, type: 3}
   _countFront: 40
-  _countRear: 10
+  _countRear: 12
   _platformPrefabs:
   - {fileID: 11400000, guid: 8d5d98e9712f42f498d803df1badc0bb, type: 2}
   - {fileID: 11400000, guid: b7fac3fbe489afe4f9a52b78b2cdc500, type: 2}
   _maxCountPlatform: 40
   _obstaclePrefabs: []
   _maxCountObstacle: 40
-  _changeWayFrequency: 0
+  _changeWayFrequency: 10
+  _minWayLength: 10
+  _minTurnLength: 10
   _roadWidth: 4
   _countRoad: 3
 --- !u!114 &432186160
