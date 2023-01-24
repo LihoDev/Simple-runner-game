@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Props
 {
-    public class WayAppointer : RowReplacer
+    public class WayAppointer : ObjectReplacer
     {
         [SerializeField] private List<ObstacleProperties> _platformPrefabs = new List<ObstacleProperties>();
         [SerializeField, Min(1)] private int _maxCountPlatform = 40;
@@ -38,7 +38,7 @@ namespace Props
 
         protected override void Show()
         {
-            if (_rows[_fierstSegmentIndex].TryGetComponent(out Row row))
+            if (_rows[_rowIndex].TryGetComponent(out Row row))
             {
                 RebuildRow(row);
             }
@@ -71,7 +71,7 @@ namespace Props
             ClearRow(row);
             for (var road = 0; road < _countRoad; road++)
             {
-                float zPosition = _rows[_fierstSegmentIndex].position.z;
+                float zPosition = _rows[_rowIndex].position.z;
                 InstantiatedObstacle obstacle = null;
                 if (road != _currentWay && road != _currentWaySecond)
                 {

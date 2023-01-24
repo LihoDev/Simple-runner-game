@@ -5,20 +5,21 @@ using UnityEngine;
 
 namespace Props
 {
-    public class RowReplacer : MonoBehaviour
+    public class ObjectReplacer : MonoBehaviour
     {
         [SerializeField, Min(1)] protected float _length;
         [SerializeField] protected SideMovement _player;
+        [SerializeField, Min(1)] protected int _countFront;
+        [SerializeField, Min(1)] protected int _countRear;
+        [SerializeField, Min(1)] protected int _maxCount;
         protected List<Transform> _rows = new List<Transform>();
-        protected int _fierstSegmentIndex = 0;
+        protected int _rowIndex = 0;
         protected float _lastSegmentPosition = 0;
         protected float _oldPlayerDistance = 0;
+        protected int MaxCountOnScene { get => _countFront + _countRear; }
 
         [SerializeField] private float _fierstIndent = 0;
         [SerializeField] private List<Transform> _prefabs = new List<Transform>();
-        [SerializeField, Min(1)] private int _countFront;
-        [SerializeField, Min(1)] private int _countRear;
-        private int MaxCountOnScene { get => _countFront + _countRear; }
 
         protected virtual void Start()
         {
@@ -39,17 +40,19 @@ namespace Props
                 return;
             }
             _lastSegmentPosition = _fierstIndent;
-            int prefabIndex = 0;
+            if (_maxCount < MaxCountOnScene)
+            {
+                Debug.LogError("Max Count is less than Max Count On Scene");
+                return;
+            }
+            foreach (Transform prefab in _prefabs)
+                for (var i = 0; i < _maxCount; i++)
+                    _rows.Add(Instantiate(prefab, new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
             for (var i = 0; i < MaxCountOnScene; i++)
             {
-                _rows.Add(Instantiate(_prefabs[prefabIndex], new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
                 PlaceProps();
-                //_lastSegmentPosition += _length;
                 Show();
-                MoveSegmentIndex();
-                prefabIndex++;
-                if (prefabIndex > _prefabs.Count - 1)
-                    prefabIndex = 0;
+                MoveRowIndex();
             }
         }
 
@@ -60,7 +63,7 @@ namespace Props
                 PlaceProps();
                 _oldPlayerDistance = _lastSegmentPosition - (_countFront * _length) + _length;
                 Show();
-                MoveSegmentIndex();
+                MoveRowIndex();
             }
         }
 
@@ -68,15 +71,15 @@ namespace Props
 
         protected virtual void PlaceProps()
         {
-            _rows[_fierstSegmentIndex].position = new Vector3(0, 0, _lastSegmentPosition);
+            _rows[_rowIndex].position = new Vector3(0, 0, _lastSegmentPosition);
             _lastSegmentPosition += _length;
         }
 
-        private void MoveSegmentIndex()
+        protected virtual void MoveRowIndex()
         {
-            _fierstSegmentIndex++;
-            if (_fierstSegmentIndex == _rows.Count)
-                _fierstSegmentIndex = 0;
+            _rowIndex++;
+            if (_rowIndex == _rows.Count)
+                _rowIndex = 0;
         }
     }
 }
