@@ -5,16 +5,16 @@ using UnityEngine;
 
 namespace Props
 {
-    public class PropInstancer : MonoBehaviour
+    public class RowReplacer : MonoBehaviour
     {
         [SerializeField, Min(1)] protected float _length;
         [SerializeField] protected SideMovement _player;
-        protected List<Transform> _instances = new List<Transform>();
+        protected List<Transform> _rows = new List<Transform>();
         protected int _fierstSegmentIndex = 0;
         protected float _lastSegmentPosition = 0;
         protected float _oldPlayerDistance = 0;
 
-        [SerializeField, Min(0)] private float _fierstIndent = 0;
+        [SerializeField] private float _fierstIndent = 0;
         [SerializeField] private List<Transform> _prefabs = new List<Transform>();
         [SerializeField, Min(1)] private int _countFront;
         [SerializeField, Min(1)] private int _countRear;
@@ -42,7 +42,7 @@ namespace Props
             int prefabIndex = 0;
             for (var i = 0; i < MaxCountOnScene; i++)
             {
-                _instances.Add(Instantiate(_prefabs[prefabIndex], new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
+                _rows.Add(Instantiate(_prefabs[prefabIndex], new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
                 PlaceProps();
                 //_lastSegmentPosition += _length;
                 Show();
@@ -68,14 +68,14 @@ namespace Props
 
         protected virtual void PlaceProps()
         {
-            _instances[_fierstSegmentIndex].position = new Vector3(0, 0, _lastSegmentPosition);
+            _rows[_fierstSegmentIndex].position = new Vector3(0, 0, _lastSegmentPosition);
             _lastSegmentPosition += _length;
         }
 
         private void MoveSegmentIndex()
         {
             _fierstSegmentIndex++;
-            if (_fierstSegmentIndex == _instances.Count)
+            if (_fierstSegmentIndex == _rows.Count)
                 _fierstSegmentIndex = 0;
         }
     }

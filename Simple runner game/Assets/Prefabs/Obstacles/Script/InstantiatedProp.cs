@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Props
+public abstract class InstantiatedProp : MonoBehaviour
 {
-    public class Coin : MonoBehaviour
-    {
-
-    }
+  
 }

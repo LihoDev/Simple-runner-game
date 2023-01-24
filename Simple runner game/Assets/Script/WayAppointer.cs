@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Props
 {
-    public class WayAppointer : PropInstancer
+    public class WayAppointer : RowReplacer
     {
         [SerializeField] private List<ObstacleProperties> _platformPrefabs = new List<ObstacleProperties>();
         [SerializeField, Min(1)] private int _maxCountPlatform = 40;
@@ -13,9 +13,12 @@ namespace Props
         [SerializeField, Min(1)] private int _maxCountObstacle = 40;
         [SerializeField] private List<ObstacleProperties> _rampPrefabs = new List<ObstacleProperties>();
         [SerializeField, Min(1)] private int _maxCountRamp = 3;
+        [SerializeField] private PropProperties _coinPrefab;
+        [SerializeField, Min(1)] private int _maxCountCoin = 20;
         [SerializeField, Range(0, 100)] private float _changeWayFrequency;
         [SerializeField, Range(0, 100)] private float _rampFrequency;
         [SerializeField, Range(0, 100)] private float _obstacleFrequency;
+        [SerializeField, Range(0, 100)] private float _coinFrequency;
         [SerializeField, Min(0)] private float _obstacleMinDistance;
         [SerializeField, Min(1)] private int _minWayLength;
         [SerializeField, Min(1)] private float _minTurnLength;
@@ -35,7 +38,7 @@ namespace Props
 
         protected override void Show()
         {
-            if (_instances[_fierstSegmentIndex].TryGetComponent(out Row row))
+            if (_rows[_fierstSegmentIndex].TryGetComponent(out Row row))
             {
                 RebuildRow(row);
             }
@@ -54,9 +57,10 @@ namespace Props
 
         protected override void Start()
         {
-            _platformInstances = InstantiatePrefabs<Platform>(_platformPrefabs, _maxCountPlatform);
-            _obstacleInstances = InstantiatePrefabs<Obstacle>(_obstaclePrefabs, _maxCountObstacle);
-            _rampsInstances = InstantiatePrefabs<Ramp>(_rampPrefabs, _maxCountRamp);
+            _platformInstances = InstantiatePrefabs<Platform, ObstacleProperties>(_maxCountPlatform, _platformPrefabs.ToArray());
+            _obstacleInstances = InstantiatePrefabs<Obstacle, ObstacleProperties>(_maxCountObstacle, _obstaclePrefabs.ToArray());
+            _rampsInstances = InstantiatePrefabs<Ramp, ObstacleProperties>(_maxCountRamp, _rampPrefabs.ToArray());
+            _coinsInstances = InstantiatePrefabs<Coin, PropProperties>(_maxCountCoin, _coinPrefab);
             for (var road = 0; road < _countRoad; road++)
                 _lastObstaclesPosition.Add(0);
             base.Start();
@@ -67,18 +71,25 @@ namespace Props
             ClearRow(row);
             for (var road = 0; road < _countRoad; road++)
             {
-                float zPosition = _instances[_fierstSegmentIndex].position.z;
+                float zPosition = _rows[_fierstSegmentIndex].position.z;
+                InstantiatedObstacle obstacle = null;
                 if (road != _currentWay && road != _currentWaySecond)
                 {
                     if (_turn && SelectRandom(_rampFrequency))
-                        PlaceObject(row, _rampsInstances, road, 0, 0, zPosition);
+                        obstacle = PlaceObstacle(row, _rampsInstances, road, 0, 0, zPosition);
                     else
-                        PlaceObject(row, _platformInstances, road, 0, 0, zPosition);
+                        obstacle = PlaceObstacle(row, _platformInstances, road, 0, 0, zPosition);
                 }
                 else if (zPosition >= _lastObstaclesPosition[road] + _obstacleMinDistance && SelectRandom(_obstacleFrequency))
                 {
-                    PlaceObject(row, _obstacleInstances, road, 0, 0, zPosition);
+                    obstacle = PlaceObstacle(row, _obstacleInstances, road, 0, 0, zPosition);
                 }
+                else if (zPosition >= _lastObstaclesPosition[road] + _obstacleMinDistance && SelectRandom(_coinFrequency))
+                {
+                    PlaceObject(row, _coinsInstances, road, 0, 0);
+                }
+                if (obstacle != null && SelectRandom(_coinFrequency))
+                    SetCoinsOnObstacle(row, road, obstacle);
             }
             _turn = false;
         }
@@ -88,13 +99,11 @@ namespace Props
             ReturnInPool(row.Platforms, _platformInstances);
             ReturnInPool(row.Obstacles, _obstacleInstances);
             ReturnInPool(row.Ramps, _rampsInstances);
-            //ReturnInPool(row.Coins, );
-            row.Platforms.Clear();
-            row.Obstacles.Clear();
-            row.Coins.Clear();
+            ReturnInPool(row.Coins, _coinsInstances);
+            row.ClearProps();
         }
 
-        private void ReturnInPool<T>(List<T> source, List<T> target) where T: InstantiatedObstacle
+        private void ReturnInPool<T>(List<T> source, List<T> target) where T: InstantiatedProp
         {
             foreach (T platform in source)
             {
@@ -125,7 +134,7 @@ namespace Props
         {
             if (SelectRandom(50))
             {
-                if (way + 1 <= _countRoad)
+                if (way + 1 < _countRoad)
                     way++;
                 else
                     way--;
@@ -137,30 +146,43 @@ namespace Props
             return way;
         }
 
-        private void PlaceObject<T>(Row row, List<T> instancers, int roadIndex, float indent, float height, float zPosition) where T : InstantiatedObstacle
+        private T PlaceObject<T>(Row row, List<T> instancers, int roadIndex, float indent, float height) where T : InstantiatedProp
         {
-            if (zPosition >= _lastObstaclesPosition[roadIndex] && instancers.Count > 0)
-            {
-                T selected = instancers[Random.Range(0, instancers.Count)];
-                instancers.Remove(selected);
-                row.AddProp(selected);
-                selected.transform.SetParent(row.transform);
-                selected.gameObject.SetActive(true);
-                selected.transform.localPosition = new Vector3((roadIndex - (_countRoad - 1) / 2) * _roadWidth, height, indent);
+            if (instancers.Count == 0)
+                return null;
+            T selected = instancers[Random.Range(0, instancers.Count)];
+            instancers.Remove(selected);
+            row.AddProp(selected);
+            selected.transform.SetParent(row.transform);
+            selected.gameObject.SetActive(true);
+            selected.transform.localPosition = new Vector3((roadIndex - (_countRoad - 1) / 2) * _roadWidth, height, indent);
+            return selected;
+        }
+
+        private T PlaceObstacle<T>(Row row, List<T> instancers, int roadIndex, float indent, float height, float zPosition) where T : InstantiatedObstacle
+        {
+            if (zPosition < _lastObstaclesPosition[roadIndex])
+                return null;
+            T selected = PlaceObject(row, instancers, roadIndex, indent, height);
+            if (selected != null)
                 _lastObstaclesPosition[roadIndex] = zPosition + selected.Properties.Length;
+            return selected;
+        }
+
+        private void SetCoinsOnObstacle(Row row, int roadIndex, InstantiatedObstacle obstacle)
+        {
+            if (obstacle.Properties is ObstaclePropertiesCoins)
+            {
+                ObstaclePropertiesCoins properties = obstacle.Properties as ObstaclePropertiesCoins;
+                for (var indent = 0; indent < properties.Length; indent++) 
+                    PlaceObject(row, _coinsInstances, roadIndex, indent, properties.CoinSpawnHeight);
             }
         }
 
-        //private void PlaceObject(Transform instance, int roadIndex, float indent, float height)
-        //{
-        //    instance.gameObject.SetActive(true);
-        //    instance.localPosition = new Vector3((roadIndex - (_countRoad - 1) / 2) * _roadWidth, height, indent);
-        //}
-
-        private List<T> InstantiatePrefabs<T>(List<ObstacleProperties> prefabs, int maxCount) where T : InstantiatedObstacle
+        private List<T> InstantiatePrefabs<T, U>(int maxCount, params U[] prefabs) where T : InstantiatedProp where U : PropProperties
         {
             List<T> instances = new List<T>();
-            foreach (ObstacleProperties obstacle in prefabs)
+            foreach (U obstacle in prefabs)
             {
                 for (var count = 0; count < maxCount * (_countRoad - 1); count++)
                 {
@@ -176,23 +198,6 @@ namespace Props
             return instances;
         }
 
-
         private bool SelectRandom(float chance) => Random.Range(1, 101) <= chance;
-
-
-        //[SerializeField] private int _fierstIndent;
-
-        //protected override void Start()
-        //{
-        //    _lastSegmentPosition = _fierstIndent;
-        //    base.Start();
-        //}
-
-        //protected override void MoveLastSegment()
-        //{
-        //    if (_instances[_fierstSegmentIndex].TryGetComponent(out Wall wall))
-        //        wall.RandomizeWall();
-        //    base.MoveLastSegment();
-        //}
     }
 }

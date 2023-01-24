@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Props
 {
-    public class SegmentInstancer : PropInstancer
+    public class SegmentInstancer : RowReplacer
     {
 
     }

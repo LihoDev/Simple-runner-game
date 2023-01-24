@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50b97fa0d8f71a748812451f27bb0724, type: 3}
+  m_Script: {fileID: 11500000, guid: ca172b5ae2a79a54ba0db3b27c08f1b5, type: 3}
   m_Name: Wall
   m_EditorClassIdentifier: 
   _prefab: {fileID: 2900829762778124062, guid: 1f61b9e6452558b4684289ef12e125ca, type: 3}
   _length: 1
-  _coinSpawnHeight: 1

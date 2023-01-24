@@ -2062,18 +2062,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432186155}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a911c66d42d1ce4c86ab155f72fb283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _length: 0
-  _player: {fileID: 1166814715}
-  _fierstIndent: 0
+  _length: 20
+  _player: {fileID: 1689938035}
+  _fierstIndent: -40
   _prefabs:
   - {fileID: 1946136053357180331, guid: e4a14087d44082943949ef6889fc57c9, type: 3}
-  _countFront: 0
-  _countRear: 0
+  _countFront: 5
+  _countRear: 1
 --- !u!4 &432186157
 Transform:
   m_ObjectHideFlags: 0
@@ -2228,12 +2228,15 @@ MonoBehaviour:
   _rampPrefabs:
   - {fileID: 11400000, guid: 0b111cfce939f894fb5f29eb55f0a96c, type: 2}
   _maxCountRamp: 5
+  _coinPrefab: {fileID: 11400000, guid: 93af4596645967243a50530f241416d9, type: 2}
+  _maxCountCoin: 20
   _changeWayFrequency: 10
   _rampFrequency: 10
   _obstacleFrequency: 10
+  _coinFrequency: 25
   _obstacleMinDistance: 15
   _minWayLength: 10
-  _minTurnLength: 10
+  _minTurnLength: 15
   _roadWidth: 4
   _countRoad: 3
 --- !u!1 &465738818

@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50b97fa0d8f71a748812451f27bb0724, type: 3}
-  m_Name: WallBendOver
+  m_Script: {fileID: 11500000, guid: b93e8b51746a5fc43948ef8dc3501fe1, type: 3}
+  m_Name: Coin
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 3754206240859706481, guid: df7dae558ad91a946b7855993f60b462, type: 3}
-  _length: 1
-  _coinSpawnHeight: 0.5
+  _prefab: {fileID: 974131939943459245, guid: 999f9b669ce889a41ba5ee4cbe3228c0, type: 3}
