@@ -13,8 +13,8 @@ namespace Player
         [SerializeField] private float _cameraOffset = 1;
         [SerializeField] private Transform _camera;
 
-        private int _currentRoad = 1;
-        private int _previousRoad = 1;
+        private int _currentRoad = 2;
+        private int _previousRoad = 2;
         private Coroutine _transformMovement;
         private Coroutine _cameraMovement;
 
@@ -27,6 +27,7 @@ namespace Player
                 _currentRoad++;
                 StartMovement();
             }
+
         }
 
         public void MoveLeft()

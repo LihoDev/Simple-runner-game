@@ -16,7 +16,7 @@ namespace Props
         protected int _rowIndex = 0;
         protected float _lastSegmentPosition = 0;
         protected float _oldPlayerDistance = 0;
-        protected int MaxCountOnScene { get => _countFront + _countRear; }
+        protected int MaxCountActive { get => _countFront + _countRear; }
 
         [SerializeField] private float _fierstIndent = 0;
         [SerializeField] private List<Transform> _prefabs = new List<Transform>();
@@ -40,15 +40,20 @@ namespace Props
                 return;
             }
             _lastSegmentPosition = _fierstIndent;
-            if (_maxCount < MaxCountOnScene)
+            if (_maxCount * _prefabs.Count < MaxCountActive)
             {
-                Debug.LogError("Max Count is less than Max Count On Scene");
+                Debug.LogError("Max count * count prefabs is less than count front + count rear");
                 return;
             }
             foreach (Transform prefab in _prefabs)
                 for (var i = 0; i < _maxCount; i++)
-                    _rows.Add(Instantiate(prefab, new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity));
-            for (var i = 0; i < MaxCountOnScene; i++)
+                {
+                    Transform instance = Instantiate(prefab, new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity);
+                    _rows.Add(instance);
+                    instance.gameObject.SetActive(false);
+                }
+                    
+            for (var i = 0; i < MaxCountActive; i++)
             {
                 PlaceProps();
                 Show();
@@ -71,6 +76,7 @@ namespace Props
 
         protected virtual void PlaceProps()
         {
+            _rows[_rowIndex].gameObject.SetActive(true);
             _rows[_rowIndex].position = new Vector3(0, 0, _lastSegmentPosition);
             _lastSegmentPosition += _length;
         }

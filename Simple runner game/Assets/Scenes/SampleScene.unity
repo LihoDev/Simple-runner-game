@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.6084906, g: 0.73899376, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44036883, g: 0.48883897, b: 0.5692523, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: a32051aef6f28654583cdedeb5362be5,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1128,7 +1129,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _jumpSpeed: 1.5
-  _jumpHeight: 1.5
+  _jumpHeight: 2
   _rayIndent: {x: 0, y: 2, z: 0}
   _ignoreLayer:
     serializedVersion: 2
@@ -1949,7 +1950,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1.82
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1958,10 +1959,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Strength: 0.367
+    m_Bias: 0
+    m_NormalBias: 0
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2006,14 +2007,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.502821, y: -0.00757544, z: 0.002729051, w: 0.8643531}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 60.374, y: -1.2, z: -0.336}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,7 +2028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 1
-  m_UsePipelineSettings: 1
+  m_UsePipelineSettings: 0
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
@@ -2069,13 +2070,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 20
   _player: {fileID: 1689938035}
-  _countFront: 5
+  _countFront: 10
   _countRear: 1
-  _maxCount: 10
+  _maxCount: 6
   _fierstIndent: -40
   _prefabs:
-  - {fileID: 1647477698636892288, guid: 50f0b452f9e87314da8c34f3f86c5413, type: 3}
-  - {fileID: 5704348292872307276, guid: b1e9d399121583544a1d4ac30a6eb976, type: 3}
+  - {fileID: 4065478082361325396, guid: 75c8d793953404a46b35de4bab9cc964, type: 3}
+  - {fileID: 7237547754992252874, guid: 1a827946291b6644aa8fab01bdc7812e, type: 3}
+  - {fileID: 5535714143331750171, guid: 55cc45c5284bf8947ae1c670ad09b955, type: 3}
+  - {fileID: 5436720599093236827, guid: f4e4aacbf7ad5694386f42b6493fb7ab, type: 3}
+  - {fileID: 6552006169147595860, guid: bcf17246bafd03645a561cfe60c431fd, type: 3}
+  - {fileID: 6006474470435683281, guid: 9edc97fce175bcc45ab4cf802173c4c4, type: 3}
+  - {fileID: 6904863666625712290, guid: e9cf161e217ca814cbd3eabd48f0642f, type: 3}
 --- !u!4 &432186157
 Transform:
   m_ObjectHideFlags: 0
@@ -2104,7 +2110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _materials:
-  - {fileID: 2100000, guid: 23e30565e85e6424ba7ee5de4095d6a6, type: 2}
   - {fileID: 2100000, guid: 612ddeae5e1c8fc4b9818bc8d830cb77, type: 2}
   _curvatureX:
     serializedVersion: 2
@@ -2214,16 +2219,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 1
   _player: {fileID: 1689938035}
-  _countFront: 40
-  _countRear: 12
-  _maxCount: 52
+  _countFront: 70
+  _countRear: 20
+  _maxCount: 90
   _fierstIndent: 20
   _prefabs:
   - {fileID: 3414974853590335264, guid: dd8fa17a44d6ac947818f48c177a5b9a, type: 3}
   _platformPrefabs:
   - {fileID: 11400000, guid: 8d5d98e9712f42f498d803df1badc0bb, type: 2}
-  - {fileID: 11400000, guid: b7fac3fbe489afe4f9a52b78b2cdc500, type: 2}
-  _maxCountPlatform: 40
+  - {fileID: 11400000, guid: aa693436cdca4a642a04ff429e862f82, type: 2}
+  - {fileID: 11400000, guid: b9f25cd10422b9b4daa7862d38439054, type: 2}
+  - {fileID: 11400000, guid: 77500ef8aa846ba419e0dbc15d2fb6e5, type: 2}
+  - {fileID: 11400000, guid: 11530fb315e0ac54a8428d1347c4c4c8, type: 2}
+  _maxCountPlatform: 20
   _obstaclePrefabs:
   - {fileID: 11400000, guid: 59e81ff32fc403c4da26ea3159d42120, type: 2}
   - {fileID: 11400000, guid: d86132fee320c8844995e982fa67b4c0, type: 2}
@@ -2234,12 +2242,12 @@ MonoBehaviour:
   _coinPrefab: {fileID: 11400000, guid: 93af4596645967243a50530f241416d9, type: 2}
   _maxCountCoin: 20
   _changeWayFrequency: 10
-  _rampFrequency: 10
+  _rampFrequency: 45
   _obstacleFrequency: 10
   _coinFrequency: 25
   _obstacleMinDistance: 15
-  _minWayLength: 10
-  _minTurnLength: 15
+  _minWayLength: 20
+  _minTurnLength: 20
   _roadWidth: 4
   _countRoad: 3
 --- !u!1 &465738818

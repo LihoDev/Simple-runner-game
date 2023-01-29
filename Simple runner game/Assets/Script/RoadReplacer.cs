@@ -18,7 +18,7 @@ namespace Props
         {
             if (_rowIndex != -1)
             {
-                if (_useRoad.Count >= MaxCountOnScene)
+                if (_useRoad.Count >= MaxCountActive)
                 {
                     _rows.Add(_useRoad[0]);
                     _useRoad.Remove(_useRoad[0]);
