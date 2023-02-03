@@ -1,29 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Settings;
 using TMPro;
+using UnityEngine;
 
-public class TotalStats : MonoBehaviour
+namespace Ui
 {
-    public int Coins { get; private set; }
-    public int Score { get; private set; }
-
-    [SerializeField] private TMP_Text _coinsOutput;
-    [SerializeField] private TMP_Text _scoreOutput;
-    [SerializeField] private SaveData _saveData;
-
-    public void RefreshValues()
+    public class TotalStats : MonoBehaviour
     {
-        Coins = _saveData.GetCoins();
-        _coinsOutput.text = Coins.ToString();
-        Score = _saveData.GetScore();
-        _scoreOutput.text = Score.ToString();
-    }
+        public int Coins { get; private set; }
+        public int Score { get; private set; }
+        [SerializeField] private TMP_Text _coinsOutput;
+        [SerializeField] private TMP_Text _scoreOutput;
+        [SerializeField] private SaveData _saveData;
 
-    private void Start()
-    {
-        RefreshValues();
-    }
+        public void RefreshValues()
+        {
+            Coins = _saveData.GetCoins();
+            _coinsOutput.text = Coins.ToString();
+            Score = _saveData.GetScore();
+            _scoreOutput.text = Score.ToString();
+        }
 
-    
+        private void Start()
+        {
+            RefreshValues();
+        }
+    }
 }

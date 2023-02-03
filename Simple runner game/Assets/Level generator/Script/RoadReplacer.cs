@@ -1,18 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Props
+namespace ObstacleGenerator
 {
-    public class RoadReplacer : ObjectReplacer
+    public class RoadReplacer : PropReplacer
     {
         private List<Transform> _useRoad = new List<Transform>();
-
-        protected override void Start()
-        {
-            base.Start();
-            //_useRoad = _rows.GetRange(0, _rows.Count);
-        }
 
         protected override void PlaceProps()
         {
@@ -20,21 +13,21 @@ namespace Props
             {
                 if (_useRoad.Count >= MaxCountActive)
                 {
-                    _rows.Add(_useRoad[0]);
+                    _instances.Add(_useRoad[0]);
                     _useRoad.Remove(_useRoad[0]);
                 }
-                _useRoad.Add(_rows[_rowIndex]);
+                _useRoad.Add(_instances[_rowIndex]);
                 base.PlaceProps();
-                _rows.Remove(_rows[_rowIndex]);
+                _instances.Remove(_instances[_rowIndex]);
             }
         }
 
         protected override void MoveRowIndex()
         {
-            if (_rows.Count == 0)
+            if (_instances.Count == 0)
                 _rowIndex = -1;
             else
-                _rowIndex = Random.Range(0, _rows.Count);
+                _rowIndex = Random.Range(0, _instances.Count);
         }
     }
 }

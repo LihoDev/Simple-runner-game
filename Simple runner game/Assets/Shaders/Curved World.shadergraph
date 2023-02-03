@@ -2001,7 +2001,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "a70e23983e3a4ed88a05295d76bd4347",
     "m_Id": 0,
-    "m_DisplayName": "Sprite",
+    "m_DisplayName": "Albedo",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2031,10 +2031,10 @@
     "m_Guid": {
         "m_GuidSerialized": "f7bb8c11-a8cc-4334-824b-1d2173d1cae5"
     },
-    "m_Name": "Sprite",
+    "m_Name": "Albedo",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Sprite",
-    "m_DefaultReferenceName": "_Sprite",
+    "m_RefNameGeneratedByDisplayName": "Albedo",
+    "m_DefaultReferenceName": "_Albedo",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,

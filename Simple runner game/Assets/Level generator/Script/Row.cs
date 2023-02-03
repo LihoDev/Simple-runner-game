@@ -1,8 +1,8 @@
-using System.Collections;
+using Prop;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Obstacles
+namespace ObstacleGenerator
 {
     public class Row : MonoBehaviour
     {

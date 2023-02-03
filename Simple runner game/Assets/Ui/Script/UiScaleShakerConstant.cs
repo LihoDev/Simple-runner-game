@@ -1,20 +1,21 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class UiScaleShakerConstant : UiScaleShaker
+namespace Ui
 {
-    protected override IEnumerator AnimateSize()
+    public class UiScaleShakerConstant : UiScaleShaker
     {
-        while (true)
+        protected override IEnumerator AnimateSize()
         {
-            yield return base.AnimateSize();
-            yield return null;
+            while (true)
+            {
+                yield return base.AnimateSize();
+                yield return null;
+            }
         }
-    }
 
-    private void Start()
-    {
-        ShakeScale();
+        private void Start()
+        {
+            ShakeScale();
+        }
     }
 }

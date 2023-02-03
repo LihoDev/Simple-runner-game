@@ -1,23 +1,21 @@
 using Player;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Props
+namespace ObstacleGenerator
 {
-    public class ObjectReplacer : MonoBehaviour
+    public class PropReplacer : MonoBehaviour
     {
         [SerializeField, Min(1)] protected float _length;
         [SerializeField] protected SideMovement _player;
         [SerializeField, Min(1)] protected int _countFront;
         [SerializeField, Min(1)] protected int _countRear;
         [SerializeField, Min(1)] protected int _maxCount;
-        protected List<Transform> _rows = new List<Transform>();
+        protected List<Transform> _instances = new List<Transform>();
         protected int _rowIndex = 0;
         protected float _lastSegmentPosition = 0;
         protected float _oldPlayerDistance = 0;
         protected int MaxCountActive { get => _countFront + _countRear; }
-
         [SerializeField] private float _fierstIndent = 0;
         [SerializeField] private List<Transform> _prefabs = new List<Transform>();
 
@@ -49,14 +47,13 @@ namespace Props
                 for (var i = 0; i < _maxCount; i++)
                 {
                     Transform instance = Instantiate(prefab, new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity);
-                    _rows.Add(instance);
+                    _instances.Add(instance);
                     instance.gameObject.SetActive(false);
                 }
-                    
             for (var i = 0; i < MaxCountActive; i++)
             {
                 PlaceProps();
-                Show();
+                ShowProps();
                 MoveRowIndex();
             }
         }
@@ -67,24 +64,24 @@ namespace Props
             {
                 PlaceProps();
                 _oldPlayerDistance = _lastSegmentPosition - (_countFront * _length) + _length;
-                Show();
+                ShowProps();
                 MoveRowIndex();
             }
         }
 
-        protected virtual void Show() { }
+        protected virtual void ShowProps() { }
 
         protected virtual void PlaceProps()
         {
-            _rows[_rowIndex].gameObject.SetActive(true);
-            _rows[_rowIndex].position = new Vector3(0, 0, _lastSegmentPosition);
+            _instances[_rowIndex].gameObject.SetActive(true);
+            _instances[_rowIndex].position = new Vector3(0, 0, _lastSegmentPosition);
             _lastSegmentPosition += _length;
         }
 
         protected virtual void MoveRowIndex()
         {
             _rowIndex++;
-            if (_rowIndex == _rows.Count)
+            if (_rowIndex == _instances.Count)
                 _rowIndex = 0;
         }
     }

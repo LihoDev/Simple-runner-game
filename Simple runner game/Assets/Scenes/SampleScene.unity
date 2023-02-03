@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2ed5de39ffdea44b05a06e13d02736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraTarget: {fileID: 397305618}
+  _target: {fileID: 397305618}
   _speed: 5
 --- !u!1 &339262684
 GameObject:
@@ -2106,7 +2106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 432186155}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b237f10dd4df5f4bb05d81fbb8e50b0, type: 3}
+  m_Script: {fileID: 11500000, guid: b912e0f4adc2f674dacef317c96840d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _materials:

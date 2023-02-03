@@ -1,11 +1,10 @@
-using Obstacles;
-using System.Collections;
+using Prop;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Props
+namespace ObstacleGenerator
 {
-    public class WayAppointer : ObjectReplacer
+    public class ObstacleAppointer : PropReplacer
     {
         [SerializeField] private List<ObstacleProperties> _platformPrefabs = new List<ObstacleProperties>();
         [SerializeField, Min(1)] private int _maxCountPlatform = 40;
@@ -22,10 +21,8 @@ namespace Props
         [SerializeField, Min(0)] private float _obstacleMinDistance;
         [SerializeField, Min(1)] private int _minWayLength;
         [SerializeField, Min(1)] private float _minTurnLength;
-        [Space]
         [SerializeField, Min(0)] private float _roadWidth = 4;
         [SerializeField, Min(1)] private int _countRoad = 3;
-
         private List<Platform> _platformInstances = new List<Platform>();
         private List<Obstacle> _obstacleInstances = new List<Obstacle>();
         private List<Ramp> _rampsInstances = new List<Ramp>();
@@ -36,22 +33,18 @@ namespace Props
         private int _currentWaySecond = 1;
         private bool _turn;
 
-        protected override void Show()
+        protected override void ShowProps()
         {
-            if (_rows[_rowIndex].TryGetComponent(out Row row))
-            {
+            if (_instances[_rowIndex].TryGetComponent(out Row row))
                 RebuildRow(row);
-            }
-            base.Show();
+            base.ShowProps();
         }
 
         protected override void PlaceProps()
         {
             _currentWayLength++;
             if (_currentWayLength > _minWayLength && SelectRandom(_changeWayFrequency))
-            {
                 ChangeWay();
-            }
             base.PlaceProps();
         }
 
@@ -71,7 +64,7 @@ namespace Props
             ClearRow(row);
             for (var road = 0; road < _countRoad; road++)
             {
-                float zPosition = _rows[_rowIndex].position.z;
+                float zPosition = _instances[_rowIndex].position.z;
                 InstantiatedObstacle obstacle = null;
                 if (road != _currentWay && road != _currentWaySecond)
                 {
@@ -81,13 +74,9 @@ namespace Props
                         obstacle = PlaceObstacle(row, _platformInstances, road, 0, 0, zPosition);
                 }
                 else if (zPosition >= _lastObstaclesPosition[road] + _obstacleMinDistance && SelectRandom(_obstacleFrequency))
-                {
                     obstacle = PlaceObstacle(row, _obstacleInstances, road, 0, 0, zPosition);
-                }
                 else if (zPosition >= _lastObstaclesPosition[road] + _obstacleMinDistance && SelectRandom(_coinFrequency))
-                {
                     PlaceObject(row, _coinsInstances, road, 0, 0);
-                }
                 if (obstacle != null && SelectRandom(_coinFrequency))
                     SetCoinsOnObstacle(row, road, obstacle);
             }

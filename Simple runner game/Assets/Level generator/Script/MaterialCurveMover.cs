@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Props
+namespace ObstacleGenerator
 {
-    public class CurvedWorld : MonoBehaviour
+    public class MaterialCurveMover : MonoBehaviour
     {
-        [SerializeField] private List<Material> _materials;
+        [SerializeField] private List<Material> _materials = new List<Material>();
         [SerializeField] private AnimationCurve _curvatureX;
         [SerializeField, Min(0)] private float _speed;
         [SerializeField] private string _curveXProperty = "_CurveX";
-
         private float _currentTime;
 
         private void FixedUpdate()

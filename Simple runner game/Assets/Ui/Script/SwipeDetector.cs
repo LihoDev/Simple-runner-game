@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Player
+namespace Ui
 {
     public class SwipeDetector : MonoBehaviour, IDragHandler, IEndDragHandler
     {

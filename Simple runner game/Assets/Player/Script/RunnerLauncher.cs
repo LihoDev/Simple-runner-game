@@ -1,11 +1,9 @@
 using Player;
-using Props;
-using System.Collections;
-using System.Collections.Generic;
+using ObstacleGenerator;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using Ui;
 
 public class RunnerLauncher : MonoBehaviour
 {
@@ -13,7 +11,7 @@ public class RunnerLauncher : MonoBehaviour
     [SerializeField] private SideMovement _sideMovement;
     [SerializeField] private ForwardMovement _forwardMovement;
     [SerializeField] private SwipeDetector _swipeDetector;
-    [SerializeField] private CurvedWorld _curvedWorld;
+    [SerializeField] private MaterialCurveMover _curvedWorld;
     [SerializeField] private ResultPanel _resultPanel;
     [SerializeField] private GameObject _statisticsPanel;
     [SerializeField] private UnityEvent OnStartRun;
