@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Player
@@ -7,7 +6,6 @@ namespace Player
     public class BendOver : MonoBehaviour
     {
         public bool Idle { get; private set; } = true;
-
         [SerializeField, Min(0)] private float _bendOverTime;
         [SerializeField] private Vector3 _bendOverCollisionSize = Vector3.one;
         [SerializeField] private Coroutine _active;
@@ -16,7 +14,7 @@ namespace Player
         {
             if (_active != null)
                 StopCoroutine(_active);
-            _active = StartCoroutine(Timer());
+            _active = StartCoroutine(BendOverTimer());
         }
 
         public void StopBendOver()
@@ -27,7 +25,7 @@ namespace Player
             Idle = true;
         }
 
-        private IEnumerator Timer()
+        private IEnumerator BendOverTimer()
         {
             Idle = false;
             float time = 0;

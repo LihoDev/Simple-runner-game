@@ -1,20 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-
-public class Score : MonoBehaviour
+namespace Ui
 {
-    public int Value { get => (int)_value;}
-
-    [SerializeField] private TMP_Text _text;
-
-    private float _value;
-
-    private void Update()
+    public class Score : MonoBehaviour
     {
-        _value += Time.deltaTime;
-        _text.text = Value.ToString();
+        public int Value { get => (int)_value; }
+        [SerializeField] private TMP_Text _text;
+        private float _value;
+
+        private void Update()
+        {
+            IncreaseValue();
+        }
+
+        private void IncreaseValue()
+        {
+            _value += Time.deltaTime;
+            _text.text = Value.ToString();
+        }
     }
 }

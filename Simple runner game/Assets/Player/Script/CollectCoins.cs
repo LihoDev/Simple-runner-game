@@ -1,20 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Prop;
 using TMPro;
+using UnityEngine;
 
 namespace Player
 {
     public class CollectCoins : MonoBehaviour
     {
         public int Count { get; private set; } = 0;
-
         [SerializeField] private TMP_Text _text;
-        [SerializeField] private LayerMask _layer;
 
         private void OnTriggerEnter(Collider collider)
         {
-            if ((_layer.value & (1 << collider.transform.gameObject.layer)) > 0)
+            CollectCoin(collider);
+        }
+
+        private void CollectCoin(Collider collider)
+        {
+            if (collider.gameObject.TryGetComponent(out Coin coin))
             {
                 Count++;
                 _text.text = Count.ToString();

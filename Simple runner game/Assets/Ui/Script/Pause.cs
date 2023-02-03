@@ -1,28 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Pause : MonoBehaviour
+namespace Ui
 {
-    public void ShowWindow() 
+    public class Pause : MonoBehaviour
     {
-        gameObject.SetActive(true);
-        PauseGame();
-    }
+        public void ShowWindow()
+        {
+            gameObject.SetActive(true);
+            PauseGame();
+        }
 
-    public void HideWindow()
-    {
-        gameObject.SetActive(false);
-        ResumeGame();
-    }
+        public void HideWindow()
+        {
+            gameObject.SetActive(false);
+            ResumeGame();
+        }
 
-    private void PauseGame()
-    {
-        Time.timeScale = 0;
-    }
+        private void PauseGame()
+        {
+            Time.timeScale = 0;
+        }
 
-    private void ResumeGame()
-    {
-        Time.timeScale = 1;
+        private void ResumeGame()
+        {
+            Time.timeScale = 1;
+        }
     }
 }

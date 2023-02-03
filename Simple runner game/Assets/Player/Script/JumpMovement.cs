@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Player
@@ -7,7 +6,6 @@ namespace Player
     public class JumpMovement : MonoBehaviour
     {
         public bool Idle { get; private set; } = true;
-        
         [SerializeField] private float _moveDownSpeed = 0;
         [SerializeField] private AnimationCurve _upCurve;
         [SerializeField] private AnimationCurve _downCurve;
@@ -17,7 +15,6 @@ namespace Player
         [SerializeField] private LayerMask _ignoreLayer;
         [SerializeField] private Transform _camera;
         [SerializeField, Min(0)] private float _cameraMovingSpeed = 5;
-
         private Coroutine _moving;
 
         public void Jump()

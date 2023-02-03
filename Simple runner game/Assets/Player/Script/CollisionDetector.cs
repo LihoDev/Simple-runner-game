@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Effects;
 using UnityEngine;
 
 namespace Player
@@ -10,19 +9,21 @@ namespace Player
         [SerializeField] private SideMovement _sideMovement;
         [SerializeField] private Shaker _shaker;
         [SerializeField] private LayerMask _layer;
-        [SerializeField] private float maxDistanceToGameOver = 1.2f;
-
+        [SerializeField] private float _maxDistanceToGameOver = 1.2f;
         private int _touchCount = 0;
 
         private void OnTriggerEnter(Collider collider)
         {
+            DetermineTypeCollision(collider);
+        }
+
+        private void DetermineTypeCollision(Collider collider)
+        {
             if ((_layer.value & (1 << collider.transform.gameObject.layer)) > 0)
             {
                 float obstaclePosition = collider.transform.position.x;
-                if (Mathf.Abs(obstaclePosition - transform.position.x) < maxDistanceToGameOver || _touchCount + 1 > 1)
-                {
+                if (IsFullCollision(obstaclePosition) || _touchCount + 1 > 1)
                     _runnerLauncher.StopRun();
-                }
                 else
                 {
                     _sideMovement.AbortMoving();
@@ -30,6 +31,11 @@ namespace Player
                 }
                 _shaker.StartShake();
             }
+        }
+
+        private bool IsFullCollision(float obstaclePosition)
+        {
+            return Mathf.Abs(obstaclePosition - transform.position.x) < _maxDistanceToGameOver;
         }
     }
 }
