@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ExtraBones
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Coffee
+    m_Weight: 0
+  - m_Path: Office Worker
+    m_Weight: 0
+  - m_Path: OfficeWorker_Armature
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck/Head
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L/FingerBig2.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L/Mitten2.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L/CoffeeInHand
+    m_Weight: 0
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R/FingerBig2.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R/Mitten2.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R.
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R./Briefcase
+    m_Weight: 0
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+    m_Weight: 1
+  - m_Path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+    m_Weight: 1

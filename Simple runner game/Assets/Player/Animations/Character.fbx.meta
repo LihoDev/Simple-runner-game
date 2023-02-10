@@ -1,0 +1,1733 @@
+fileFormatVersion: 2
+guid: e0d2753eb2147bf448a6a5c2c42afab3
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -1057779919998073682
+    second: OfficeWorker_Armature|BendOver_End
+  - first:
+      74: -4449223987197204835
+    second: OfficeWorker_Armature|BendOver_Moving
+  - first:
+      74: 4393988268146002300
+    second: OfficeWorker_Armature|BendOver_Start
+  - first:
+      74: 8209479796562077616
+    second: OfficeWorker_Armature|Collision
+  - first:
+      74: 6174553209158868698
+    second: OfficeWorker_Armature|Collision_Left
+  - first:
+      74: -2446906462533530440
+    second: OfficeWorker_Armature|Collision_Right
+  - first:
+      74: -5379465679935051888
+    second: OfficeWorker_Armature|Jump_Left_Landing
+  - first:
+      74: 7923987875774858055
+    second: OfficeWorker_Armature|Jump_Left_Moving
+  - first:
+      74: 7855918382407729980
+    second: OfficeWorker_Armature|Jump_Left_Start
+  - first:
+      74: 6929538051872529558
+    second: OfficeWorker_Armature|Jump_Right_Landing
+  - first:
+      74: 6167803136711229599
+    second: OfficeWorker_Armature|Jump_Right_Moving
+  - first:
+      74: 5439318473366954363
+    second: OfficeWorker_Armature|Jump_Right_Start
+  - first:
+      74: -1253240805852158979
+    second: OfficeWorker_Armature|Jump_Up_Landing
+  - first:
+      74: -4994250687958351100
+    second: OfficeWorker_Armature|Jump_Up_Moving
+  - first:
+      74: 7821963331158200784
+    second: OfficeWorker_Armature|Jump_Up_Start
+  - first:
+      74: 872184611139395732
+    second: OfficeWorker_Armature|Run
+  - first:
+      74: 2131806683465013074
+    second: OfficeWorker_Armature|Idle
+  - first:
+      74: -1252548669016994939
+    second: OfficeWorker_Armature|Idle_Drink
+  - first:
+      74: 6625905126954365440
+    second: OfficeWorker_Armature|Idle_End
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: OfficeWorker_Armature/Bone
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'OfficeWorker_Armature|Collision' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Foot.R' has scale animation
+      that will be discarded.\n\nClip 'OfficeWorker_Armature|Collision_Left' has
+      import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'FingerBig1.L'
+      has translation animation that will be discarded.\n\t'FingerBig1.R' has translation
+      animation that will be discarded.\n\nClip 'OfficeWorker_Armature|Jump_Right_Landing'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'FingerBig1.L'
+      has translation animation that will be discarded.\n\t'FingerBig1.R' has translation
+      animation that will be discarded.\n\nClip 'OfficeWorker_Armature|Jump_Right_Start'
+      has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Foot.L'
+      has scale animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|BendOver_End
+      takeName: OfficeWorker_Armature|BendOver_End
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Coffee
+        weight: 0
+      - path: Office Worker
+        weight: 0
+      - path: OfficeWorker_Armature
+        weight: 1
+      - path: OfficeWorker_Armature/Bone
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck/Head
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L/FingerBig2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L/Mitten2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L/CoffeeInHand
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R/FingerBig2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R/Mitten2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R.
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R./Briefcase
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 5301b39efbf61ac47b6d02a6cf0c53a7, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|BendOver_Moving
+      takeName: OfficeWorker_Armature|BendOver_Moving
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Coffee
+        weight: 0
+      - path: Office Worker
+        weight: 0
+      - path: OfficeWorker_Armature
+        weight: 1
+      - path: OfficeWorker_Armature/Bone
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck/Head
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L/FingerBig2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L/Mitten2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L/CoffeeInHand
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R/FingerBig2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R/Mitten2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R.
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R./Briefcase
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 5301b39efbf61ac47b6d02a6cf0c53a7, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|BendOver_Start
+      takeName: OfficeWorker_Armature|BendOver_Start
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Coffee
+        weight: 0
+      - path: Office Worker
+        weight: 0
+      - path: OfficeWorker_Armature
+        weight: 1
+      - path: OfficeWorker_Armature/Bone
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck/Head
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L/FingerBig2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L/Mitten2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L/CoffeeInHand
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R/FingerBig2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R/Mitten2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R.
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R./Briefcase
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 5301b39efbf61ac47b6d02a6cf0c53a7, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Collision
+      takeName: OfficeWorker_Armature|Collision
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 11
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Collision_Left
+      takeName: OfficeWorker_Armature|Collision_Left
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Collision_Right
+      takeName: OfficeWorker_Armature|Collision_Right
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Idle
+      takeName: OfficeWorker_Armature|Idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Coffee
+        weight: 0
+      - path: Office Worker
+        weight: 0
+      - path: OfficeWorker_Armature
+        weight: 1
+      - path: OfficeWorker_Armature/Bone
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck/Head
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L/FingerBig2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L/Mitten2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L/CoffeeInHand
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R/FingerBig2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R/Mitten2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R.
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R./Briefcase
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 5301b39efbf61ac47b6d02a6cf0c53a7, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Idle_Drink
+      takeName: OfficeWorker_Armature|Idle_Drink
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Coffee
+        weight: 0
+      - path: Office Worker
+        weight: 0
+      - path: OfficeWorker_Armature
+        weight: 1
+      - path: OfficeWorker_Armature/Bone
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck/Head
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L/FingerBig2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L/Mitten2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L/CoffeeInHand
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R/FingerBig2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R/Mitten2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R.
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R./Briefcase
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 5301b39efbf61ac47b6d02a6cf0c53a7, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Idle_End
+      takeName: OfficeWorker_Armature|Idle_End
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Coffee
+        weight: 0
+      - path: Office Worker
+        weight: 0
+      - path: OfficeWorker_Armature
+        weight: 1
+      - path: OfficeWorker_Armature/Bone
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Neck/Head
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/FingerBig1.L/FingerBig2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/Mitten1.L/Mitten2.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.L/UpperArm.L/LowerArm.L/Hand.L/SubjectPoint.L/CoffeeInHand
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/FingerBig1.R/FingerBig2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/Mitten1.R/Mitten2.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R.
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/Spine/Chest/UpperChest/Shoulder.R/UpperArm.R/LowerArm.R/Hand.R/SubjectPoint.R./Briefcase
+        weight: 0
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.L/LowerLeg.L/Foot.L/Toes.L
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R
+        weight: 1
+      - path: OfficeWorker_Armature/Bone/Hips/UpperLeg.R/LowerLeg.R/Foot.R/Toes.R
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 5301b39efbf61ac47b6d02a6cf0c53a7, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Left_Landing
+      takeName: OfficeWorker_Armature|Jump_Left_Landing
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Left_Moving
+      takeName: OfficeWorker_Armature|Jump_Left_Moving
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Left_Start
+      takeName: OfficeWorker_Armature|Jump_Left_Start
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Right_Landing
+      takeName: OfficeWorker_Armature|Jump_Right_Landing
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Right_Moving
+      takeName: OfficeWorker_Armature|Jump_Right_Moving
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Right_Start
+      takeName: OfficeWorker_Armature|Jump_Right_Start
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Up_Landing
+      takeName: OfficeWorker_Armature|Jump_Up_Landing
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Up_Moving
+      takeName: OfficeWorker_Armature|Jump_Up_Moving
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Jump_Up_Start
+      takeName: OfficeWorker_Armature|Jump_Up_Start
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 4
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OfficeWorker_Armature|Run
+      takeName: OfficeWorker_Armature|Run
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperLeg.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerLeg.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Foot.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperArm.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerArm.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hand.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FingerBig1.L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FingerBig2.L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mitten1.L
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mitten2.L
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FingerBig1.R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: FingerBig2.R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mitten1.R
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Mitten2.R
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperChest
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Character(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Office Worker
+      parentName: Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Coffee
+      parentName: Character(Clone)
+      position: {x: -0, y: 0, z: -6.3212957}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: OfficeWorker_Armature
+      parentName: Character(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone
+      parentName: OfficeWorker_Armature
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.000000648193, y: -0.00000004371139, z: 2.833341e-14, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips
+      parentName: Bone
+      position: {x: 0.0038387321, y: 1.5670266, z: -0.028519582}
+      rotation: {x: 0.03300976, y: 7.1054274e-15, z: -0.0000000028858032, w: 0.9994551}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine
+      parentName: Hips
+      position: {x: 1.2154255e-10, y: 0.1212273, z: 0.000000014688315}
+      rotation: {x: -0.13921157, y: 1.2367532e-10, z: 0.000000012152873, w: 0.9902626}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: Chest
+      parentName: Spine
+      position: {x: -8.979306e-11, y: 0.3804305, z: -1.359427e-10}
+      rotation: {x: 0.12527832, y: 2.333965e-11, z: -0.000000010917937, w: 0.9921217}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: UpperChest
+      parentName: Chest
+      position: {x: -1.8891777e-11, y: 0.18250492, z: -0.00000003751156}
+      rotation: {x: 0.22779782, y: -0.00000011387565, z: -0.00000004648814, w: 0.9737085}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Neck
+      parentName: UpperChest
+      position: {x: -1.5561685e-10, y: 0.20232421, z: 0.0000000028284686}
+      rotation: {x: -0.18864302, y: 0.00000011706934, z: 0.0000000380714, w: 0.98204577}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Head
+      parentName: Neck
+      position: {x: -5.451284e-11, y: 0.057953298, z: 0.000000011228957}
+      rotation: {x: -0.07351967, y: 0.0000000010272457, z: 0.000000005997557, w: 0.99729383}
+      scale: {x: 1, y: 0.9999999, z: 0.99999976}
+    - name: Head_end
+      parentName: Head
+      position: {x: -0, y: 0.4661069, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder.L
+      parentName: UpperChest
+      position: {x: -0.000000020037898, y: 0.07924616, z: -0.06184679}
+      rotation: {x: -0.5735859, y: 0.64185494, z: 0.44966766, w: 0.23837039}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+    - name: UpperArm.L
+      parentName: Shoulder.L
+      position: {x: 0.000000059604645, y: 0.28463453, z: 0.000000018626451}
+      rotation: {x: -0.10982846, y: -0.029419746, z: 0.11860721, w: -0.9864099}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.9999995}
+    - name: LowerArm.L
+      parentName: UpperArm.L
+      position: {x: -0.00000011920929, y: 0.46000704, z: 0}
+      rotation: {x: 0.0035966104, y: -0.008176797, z: -0.044670664, w: -0.9989618}
+      scale: {x: 1.0000008, y: 1.0000005, z: 1.0000004}
+    - name: Hand.L
+      parentName: LowerArm.L
+      position: {x: -0.000000043364707, y: 0.40590844, z: 0.000000018626451}
+      rotation: {x: 0.019730013, y: -0.035457868, z: -0.018813642, w: 0.99899924}
+      scale: {x: 0.99999994, y: 1.0000007, z: 1.0000007}
+    - name: FingerBig1.L
+      parentName: Hand.L
+      position: {x: -0.033720024, y: 0.031081177, z: 0.005969883}
+      rotation: {x: -0.0192891, y: -0.005562995, z: 0.05201659, w: 0.99844444}
+      scale: {x: 0.9999998, y: 1, z: 1.0000001}
+    - name: FingerBig2.L
+      parentName: FingerBig1.L
+      position: {x: 0.000000013504177, y: 0.08172468, z: -0.000000033527613}
+      rotation: {x: 0.000000022351736, y: 0.0000004528555, z: -0.00000009565154, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999998}
+    - name: FingerBig2.L_end
+      parentName: FingerBig2.L
+      position: {x: -0, y: 0.0888268, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mitten1.L
+      parentName: Hand.L
+      position: {x: -0.0000000037252903, y: 0.1141696, z: -0.0000000040745363}
+      rotation: {x: -0.018210635, y: 0.001047481, z: -0.024621058, w: 0.99953043}
+      scale: {x: 0.9999996, y: 1.0000001, z: 1.0000001}
+    - name: Mitten2.L
+      parentName: Mitten1.L
+      position: {x: -0.000000007450581, y: 0.09016394, z: 0.00000004726462}
+      rotation: {x: 0.00000006705522, y: -0.000000042375174, z: -0.000000051162708,
+        w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: Mitten2.L_end
+      parentName: Mitten2.L
+      position: {x: -0, y: 0.09546004, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SubjectPoint.L
+      parentName: Hand.L
+      position: {x: -0.0000000037252903, y: 0.1141696, z: -0.0000000040745363}
+      rotation: {x: -0.115516156, y: -0.686701, z: 0.7108824, w: 0.09871078}
+      scale: {x: 1, y: 0.9999998, z: 0.99999994}
+    - name: SubjectPoint.L_end
+      parentName: SubjectPoint.L
+      position: {x: -0, y: 0.1500001, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder.R
+      parentName: UpperChest
+      position: {x: -0.000000020037898, y: 0.07924616, z: -0.06184679}
+      rotation: {x: 0.57358605, y: 0.64185494, z: 0.44966754, w: -0.23837055}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000007}
+    - name: UpperArm.R
+      parentName: Shoulder.R
+      position: {x: 0.00000010058284, y: 0.28463462, z: 0.0000000037252903}
+      rotation: {x: 0.10982904, y: -0.029419698, z: 0.11860716, w: 0.98640984}
+      scale: {x: 1.0000005, y: 1.0000005, z: 0.9999997}
+    - name: LowerArm.R
+      parentName: UpperArm.R
+      position: {x: -0, y: 0.460007, z: 0.000000022351742}
+      rotation: {x: -0.0035971766, y: -0.008176973, z: -0.04467095, w: 0.99896187}
+      scale: {x: 1.0000008, y: 1, z: 1}
+    - name: Hand.R
+      parentName: LowerArm.R
+      position: {x: 0.0000000018626451, y: 0.40590838, z: -0.000000016763806}
+      rotation: {x: 0.33836117, y: 0.027030513, z: 0.0008459634, w: 0.94062763}
+      scale: {x: 0.9999992, y: 1.0000001, z: 1.0000008}
+    - name: FingerBig1.R
+      parentName: Hand.R
+      position: {x: 0.021701876, y: 0.012980547, z: -0.015337937}
+      rotation: {x: -0.21359433, y: 0.05841513, z: -0.42639711, w: 0.8770123}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1.0000001}
+    - name: FingerBig2.R
+      parentName: FingerBig1.R
+      position: {x: -0.0000000037252903, y: 0.08172468, z: -0.000000020489097}
+      rotation: {x: -0.00000010617076, y: -0.00000042555615, z: 0.00000024437574,
+        w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000004}
+    - name: FingerBig2.R_end
+      parentName: FingerBig2.R
+      position: {x: -0, y: 0.0888268, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mitten1.R
+      parentName: Hand.R
+      position: {x: 0.0000000088475645, y: 0.11416954, z: 0}
+      rotation: {x: -0.2865249, y: -0.014970049, z: -0.38382486, w: 0.8777003}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
+    - name: Mitten2.R
+      parentName: Mitten1.R
+      position: {x: -0.000000005820766, y: 0.09016392, z: 0.000000011175871}
+      rotation: {x: 0.00000015646218, y: 0.0000000011641531, z: -0.00000008236747,
+        w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.9999998}
+    - name: Mitten2.R_end
+      parentName: Mitten2.R
+      position: {x: -0, y: 0.09546004, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: SubjectPoint.R.
+      parentName: Hand.R
+      position: {x: 0.03126517, y: 0.10174576, z: -0.034043085}
+      rotation: {x: -0.7200856, y: 0.000000026077027, z: 0.013194003, w: 0.6937598}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000006}
+    - name: Briefcase
+      parentName: SubjectPoint.R.
+      position: {x: -0.000000052154064, y: 0.0000002682209, z: 0.00000020861626}
+      rotation: {x: 0.6544434, y: -0.025220072, z: 0.75524133, w: 0.02604527}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
+    - name: SubjectPoint.R._end
+      parentName: SubjectPoint.R.
+      position: {x: -0, y: 0.1500001, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperLeg.L
+      parentName: Hips
+      position: {x: -0.13573031, y: -0.024244692, z: 0.050194923}
+      rotation: {x: 0.7096903, y: 0.028340004, z: 0.7033626, w: 0.028594438}
+      scale: {x: 1, y: 1, z: 1.0000312}
+    - name: LowerLeg.L
+      parentName: UpperLeg.L
+      position: {x: 0.000000013969839, y: 0.6445959, z: -0.000000033527613}
+      rotation: {x: 0.0000118967155, y: 0.008755789, z: 0.07855924, w: 0.996871}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000107}
+    - name: Foot.L
+      parentName: LowerLeg.L
+      position: {x: -0.000000027939677, y: 0.7638447, z: -0.000000005122274}
+      rotation: {x: -0.0352116, y: -0.05167307, z: -0.58424765, w: 0.809163}
+      scale: {x: 1.0000045, y: 1.0000014, z: 1.000005}
+    - name: Toes.L
+      parentName: Foot.L
+      position: {x: -0.000000052154064, y: 0.21062393, z: 0.000000033527613}
+      rotation: {x: -0.0163393, y: 0.02697581, z: -0.19544303, w: 0.98020786}
+      scale: {x: 1.0000007, y: 1.0000002, z: 0.99999946}
+    - name: Toes.L_end
+      parentName: Toes.L
+      position: {x: -0, y: 0.08078335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperLeg.R
+      parentName: Hips
+      position: {x: 0.13573031, y: -0.02424466, z: 0.050194923}
+      rotation: {x: 0.70969015, y: -0.028339889, z: -0.7033627, w: 0.028594552}
+      scale: {x: 1.0000004, y: 1, z: 1.0000311}
+    - name: LowerLeg.R
+      parentName: UpperLeg.R
+      position: {x: 0.000000017695129, y: 0.64459586, z: 0.000000007450581}
+      rotation: {x: -0.000012058766, y: 0.008755784, z: 0.07855924, w: -0.996871}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000001}
+    - name: Foot.R
+      parentName: LowerLeg.R
+      position: {x: -0.0000000060535967, y: 0.7638446, z: -0.000000009546056}
+      rotation: {x: 0.035211634, y: -0.05167326, z: -0.5842477, w: -0.80916303}
+      scale: {x: 1.0000005, y: 1.0000011, z: 1.00001}
+    - name: Toes.R
+      parentName: Foot.R
+      position: {x: -0.000000084750354, y: 0.21062382, z: -0.000000011175871}
+      rotation: {x: -0.016339365, y: -0.02697599, z: 0.19544306, w: 0.98020786}
+      scale: {x: 1.0000006, y: 1.0000002, z: 0.9999998}
+    - name: Toes.R_end
+      parentName: Toes.R
+      position: {x: -0, y: 0.08078335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LegIk.L
+      parentName: OfficeWorker_Armature
+      position: {x: -0.22166029, y: 0.06294407, z: 1.3395667}
+      rotation: {x: 0.49784282, y: -0.50214785, z: 0.5021481, w: -0.49784276}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: LegKnee.L
+      parentName: LegIk.L
+      position: {x: -0.8099677, y: -1.7079309, z: -0.21564832}
+      rotation: {x: -0.70722896, y: 0.00000023841858, z: -0.7069847, w: -0.00000005797483}
+      scale: {x: 0.99999976, y: 1, z: 1.0000002}
+    - name: LegKnee.L_end
+      parentName: LegKnee.L
+      position: {x: -0, y: 0.14999998, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ArmIk.L
+      parentName: OfficeWorker_Armature
+      position: {x: -0.365345, y: 0.21955895, z: -0.1114518}
+      rotation: {x: -0.70641404, y: 0.031291824, z: -0.031291828, w: 0.7064141}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: ArmKnee.L
+      parentName: ArmIk.L
+      position: {x: -0.28340998, y: 0.27836996, z: -0.15613928}
+      rotation: {x: -0, y: -0.0081851855, z: 0.0000000018626451, w: 0.99996656}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: ArmKnee.L_end
+      parentName: ArmKnee.L
+      position: {x: -0, y: 0.15000004, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LegIk.R
+      parentName: OfficeWorker_Armature
+      position: {x: 0.20233332, y: 0.09488096, z: 1.1522051}
+      rotation: {x: -0.49784282, y: -0.50214785, z: 0.5021481, w: 0.49784276}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: LegKnee.R
+      parentName: LegIk.R
+      position: {x: 0.6833534, y: -2.1221569, z: -0.089359}
+      rotation: {x: 0.7069846, y: 0.00000032631215, z: 0.707229, w: 0.000000029802322}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1.0000002}
+    - name: LegKnee.R_end
+      parentName: LegKnee.R
+      position: {x: -0, y: 0.14999998, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ArmIk.R
+      parentName: OfficeWorker_Armature
+      position: {x: 0.30729526, y: 0.08640599, z: -0.3222606}
+      rotation: {x: -0.70641404, y: -0.031291824, z: 0.031291828, w: 0.7064141}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1.0000001}
+    - name: ArmKnee.R
+      parentName: ArmIk.R
+      position: {x: 0.5234486, y: 0.8477204, z: 0.17832172}
+      rotation: {x: -0, y: 0.0081851855, z: -0.0000000018626451, w: 0.99996656}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: ArmKnee.R_end
+      parentName: ArmKnee.R
+      position: {x: -0, y: 0.15000004, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
