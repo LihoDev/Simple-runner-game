@@ -8,11 +8,10 @@ namespace Player
         [SerializeField] private string _parameterStartRun = "StartRun";
         [SerializeField] private string _parameterDrink = "drink";
         [SerializeField] private string _parameterBendOverStart = "BendOver_Start";
-        [SerializeField] private string _parameterBendOverEnd = "BendOver_End";
         [SerializeField] private string _parameterColiision = "Coliision";
         [SerializeField] private string _parameterCollisionLeft = "Collision_Left";
         [SerializeField] private string _parameterCollisionRight = "Collision_Right";
-        [SerializeField] private string _parameterLanding = "Landing";
+        [SerializeField] private string _parameterStopAction = "StopAction";
         [SerializeField] private string _parameterMoveLeft = "Move_Left";
         [SerializeField] private string _parameterMoveRight = "Move_Right";
         [SerializeField] private string _parameterJump = "Jump";
@@ -25,15 +24,13 @@ namespace Player
 
         public void CallBendOverStart() => _animator.SetTrigger(_parameterBendOverStart);
 
-        public void CallBendOverEnd() => _animator.SetTrigger(_parameterBendOverEnd);
-
         public void CallColiision() => _animator.SetTrigger(_parameterColiision);
 
         public void CallCollisionLeft() => _animator.SetTrigger(_parameterCollisionLeft);
 
         public void CallCollisionRight() => _animator.SetTrigger(_parameterCollisionRight);
 
-        public void CallLanding() => _animator.SetTrigger(_parameterLanding);
+        public void CallStopAction() => _animator.SetTrigger(_parameterStopAction);
 
         public void CallMoveLeft() => _animator.SetTrigger(_parameterMoveLeft);
 

@@ -31,6 +31,7 @@ namespace Player
         {
             if (_moving != null)
             {
+                _animationCaller.CallStopAction();
                 StopCoroutine(_moving);
                 _animationCaller.CallDown();
                 _moving = StartCoroutine(MoveDown(_moveDownSpeed));
@@ -55,7 +56,6 @@ namespace Player
                 transform.localPosition = new Vector3(0, startHeight + _jumpHeight * _upCurve.Evaluate(time), 0);
                 yield return null;
             }
-            _animationCaller.CallLanding();
         }
 
         private IEnumerator MoveDown(float speed)
@@ -72,7 +72,6 @@ namespace Player
                 transform.localPosition = new Vector3(0, (newHieght < previousHieght) ? previousHieght : newHieght, 0);
                 yield return null;
             }
-            _animationCaller.CallLanding();
             _moving = null;
             Idle = true;
         }
@@ -82,6 +81,7 @@ namespace Player
             float startHeight = transform.localPosition.y;
             yield return MoveUp(startHeight);
             yield return MoveDown(_jumpSpeed);
+            _animationCaller.CallStopAction();
         }
 
         private float GetDistanceGround()

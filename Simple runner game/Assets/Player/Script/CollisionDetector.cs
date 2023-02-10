@@ -10,6 +10,7 @@ namespace Player
         [SerializeField] private Shaker _shaker;
         [SerializeField] private LayerMask _layer;
         [SerializeField] private float _maxDistanceToGameOver = 1.2f;
+        [SerializeField] private AnimationCaller _animationCaller;
         private int _touchCount = 0;
 
         private void OnTriggerEnter(Collider collider)
@@ -23,9 +24,16 @@ namespace Player
             {
                 float obstaclePosition = collider.transform.position.x;
                 if (IsFullCollision(obstaclePosition) || _touchCount + 1 > 1)
+                {
                     _runnerLauncher.StopRun();
+                    _animationCaller.CallColiision();
+                }
                 else
                 {
+                    if (transform.position.x < collider.transform.position.x)
+                        _animationCaller.CallCollisionRight();
+                    else
+                        _animationCaller.CallCollisionLeft();
                     _sideMovement.AbortMoving();
                     _touchCount++;
                 }

@@ -74,7 +74,7 @@ namespace Player
                 moveObject.localPosition = Vector3.MoveTowards(moveObject.localPosition, target, _speed * Time.deltaTime);
                 yield return null;
             }
-            _animationCaller.CallLanding();
+            _animationCaller.CallStopAction();
         }
     }
 }

@@ -1538,6 +1538,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _maxDistanceToGameOver: 1.2
+  _animationCaller: {fileID: 5866666020063466498}
 --- !u!54 &339262691
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5725,6 +5726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bendOverTime: 1
   _bendOverCollisionSize: {x: 1, y: 0.5, z: 1}
+  _animationCaller: {fileID: 5866666020063466498}
 --- !u!1 &1825932174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6648,7 +6650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147786273985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05414152, y: 0, z: -0.04796481}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7549,11 +7551,10 @@ MonoBehaviour:
   _parameterStartRun: StartRun
   _parameterDrink: drink
   _parameterBendOverStart: BendOver_Start
-  _parameterBendOverEnd: BendOver_End
   _parameterColiision: Coliision
   _parameterCollisionLeft: Collision_Left
   _parameterCollisionRight: Collision_Right
-  _parameterLanding: Landing
+  _parameterStopAction: StopAction
   _parameterMoveLeft: Move_Left
   _parameterMoveRight: Move_Right
   _parameterJump: Jump
