@@ -1,5 +1,6 @@
 using Effects;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -11,6 +12,7 @@ namespace Player
         [SerializeField] private LayerMask _layer;
         [SerializeField] private float _maxDistanceToGameOver = 1.2f;
         [SerializeField] private AnimationCaller _animationCaller;
+        [SerializeField] private UnityEvent StopRun;
         private int _touchCount = 0;
 
         private void OnTriggerEnter(Collider collider)
@@ -27,6 +29,7 @@ namespace Player
                 {
                     _runnerLauncher.StopRun();
                     _animationCaller.CallColiision();
+                    StopRun?.Invoke();
                 }
                 else
                 {

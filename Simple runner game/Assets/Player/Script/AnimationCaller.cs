@@ -32,6 +32,8 @@ namespace Player
 
         public void CallStopAction() => _animator.SetTrigger(_parameterStopAction);
 
+        public void ResetStopAction() => _animator.ResetTrigger(_parameterStopAction);
+
         public void CallMoveLeft() => _animator.SetTrigger(_parameterMoveLeft);
 
         public void CallMoveRight() => _animator.SetTrigger(_parameterMoveRight);

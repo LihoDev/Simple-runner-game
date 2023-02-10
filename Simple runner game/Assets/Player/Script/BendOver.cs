@@ -15,6 +15,7 @@ namespace Player
         {
             if (_active != null)
                 StopCoroutine(_active);
+            _animationCaller.ResetStopAction();
             _active = StartCoroutine(BendOverTimer());
             _animationCaller.CallBendOverStart();
         }

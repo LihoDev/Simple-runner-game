@@ -21,6 +21,7 @@ namespace Player
         {
             if (_currentRoad + 1 < _countRoad)
             {
+                _animationCaller.ResetStopAction();
                 _previousRoad = _currentRoad;
                 _currentRoad++;
                 _animationCaller.CallMoveRight();
@@ -32,6 +33,7 @@ namespace Player
         {
             if (_currentRoad - 1 >= 0)
             {
+                _animationCaller.ResetStopAction();
                 _previousRoad = _currentRoad;
                 _currentRoad--;
                 _animationCaller.CallMoveLeft();
