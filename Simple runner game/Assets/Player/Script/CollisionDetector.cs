@@ -13,6 +13,8 @@ namespace Player
         [SerializeField] private float _maxDistanceToGameOver = 1.2f;
         [SerializeField] private AnimationCaller _animationCaller;
         [SerializeField] private UnityEvent StopRun;
+        [SerializeField] private UnityEvent Touch;
+        [SerializeField] private int _maxCountTouch = 2;
         private int _touchCount = 0;
 
         private void OnTriggerEnter(Collider collider)
@@ -25,7 +27,7 @@ namespace Player
             if ((_layer.value & (1 << collider.transform.gameObject.layer)) > 0)
             {
                 float obstaclePosition = collider.transform.position.x;
-                if (IsFullCollision(obstaclePosition) || _touchCount + 1 > 1)
+                if (IsFullCollision(obstaclePosition) || _touchCount + 1 >= _maxCountTouch)
                 {
                     _runnerLauncher.StopRun();
                     _animationCaller.CallColiision();
@@ -39,6 +41,7 @@ namespace Player
                         _animationCaller.CallCollisionLeft();
                     _sideMovement.AbortMoving();
                     _touchCount++;
+                    Touch?.Invoke();
                 }
                 _shaker.StartShake();
             }
