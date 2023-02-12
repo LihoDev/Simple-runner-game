@@ -32,6 +32,7 @@ namespace Player
         {
             if (_moving != null)
             {
+                _animationCaller.ResetStopAction();
                 StopCoroutine(_moving);
                 _animationCaller.CallDown();
                 _moving = StartCoroutine(MoveDown(_moveDownSpeed));
@@ -117,7 +118,10 @@ namespace Player
             if (_moving == null)
             {
                 if (GetDistanceGround() > 0.1f && transform.localPosition.y > 0)
+                {
+                    _animationCaller.CallDown();
                     _moving = StartCoroutine(MoveDown(_jumpSpeed));
+                }
                 else
                     SetHeight();
             }

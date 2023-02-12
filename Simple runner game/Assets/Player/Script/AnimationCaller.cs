@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Player
@@ -6,7 +7,7 @@ namespace Player
     public class AnimationCaller : MonoBehaviour
     {
         [SerializeField] private string _parameterStartRun = "StartRun";
-        [SerializeField] private string _parameterDrink = "drink";
+        [SerializeField] private string _parameterDrink = "Drink";
         [SerializeField] private string _parameterBendOverStart = "BendOver_Start";
         [SerializeField] private string _parameterColiision = "Coliision";
         [SerializeField] private string _parameterCollisionLeft = "Collision_Left";
