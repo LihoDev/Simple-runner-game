@@ -119,6 +119,7 @@ namespace Player
             {
                 if (GetDistanceGround() > 0.1f && transform.localPosition.y > 0)
                 {
+                    _animationCaller.ResetStopAction();
                     _animationCaller.CallDown();
                     _moving = StartCoroutine(MoveDown(_jumpSpeed));
                 }

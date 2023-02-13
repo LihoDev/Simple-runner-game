@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class CollectCoins : MonoBehaviour
+    public class CoinsCollector : MonoBehaviour
     {
         public int Count { get; private set; } = 0;
         [SerializeField] private TMP_Text _text;

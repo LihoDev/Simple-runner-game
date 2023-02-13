@@ -10,7 +10,7 @@ namespace Ui
     {
         [SerializeField] private TMP_Text _coinsText;
         [SerializeField] private TMP_Text _scoreText;
-        [SerializeField] private CollectCoins _collectCoins;
+        [SerializeField] private CoinsCollector _collectCoins;
         [SerializeField] private Score _score;
         [SerializeField] private TotalStats _totalStats;
         [SerializeField] private SaveData _saveData;
