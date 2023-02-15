@@ -1,5 +1,5 @@
 using Player;
-using Settings;
+using Data;
 using System.Collections;
 using TMPro;
 using UnityEngine;

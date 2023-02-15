@@ -140,7 +140,6 @@ namespace ObstacleGenerator
         {
             _minTurnLength += _forwardMovement.CurrentSpeed - _lastSpeed;
             _lastSpeed = _forwardMovement.CurrentSpeed;
-            Debug.Log(_minTurnLength);
         }
 
         private int MoveWay(int way)

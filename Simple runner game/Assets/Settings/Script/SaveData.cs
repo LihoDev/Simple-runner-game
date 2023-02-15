@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Settings
+namespace Data
 {
     public class SaveData : MonoBehaviour
     {
@@ -29,7 +29,7 @@ namespace Settings
             PlayerPrefs.SetInt(_scoreKey, count);
         }
 
-        public float GetMusicValume()
+        public float GetMusicVolume()
         {
             return PlayerPrefs.GetFloat(_musicVolumeKey, 0.7f);
         }
@@ -39,7 +39,7 @@ namespace Settings
             PlayerPrefs.SetFloat(_musicVolumeKey, value);
         }
 
-        public float GetSoundEffectsValume()
+        public float GetSoundEffectsVolume()
         {
             return PlayerPrefs.GetFloat(_soundEffectsVolumeKey, 0.7f);
         }

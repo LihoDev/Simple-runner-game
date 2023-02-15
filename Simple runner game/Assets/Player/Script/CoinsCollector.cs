@@ -1,6 +1,7 @@
 using Prop;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -8,6 +9,7 @@ namespace Player
     {
         public int Count { get; private set; } = 0;
         [SerializeField] private TMP_Text _text;
+        [SerializeField] private UnityEvent Collect;
 
         private void OnTriggerEnter(Collider collider)
         {
@@ -21,6 +23,7 @@ namespace Player
                 Count++;
                 _text.text = Count.ToString();
                 collider.gameObject.SetActive(false);
+                Collect?.Invoke();
             }
         }
     }

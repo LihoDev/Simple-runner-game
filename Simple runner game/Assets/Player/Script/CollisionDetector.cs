@@ -15,6 +15,7 @@ namespace Player
         [SerializeField] private float _maxDistanceToGameOver = 1.2f;
         [SerializeField] private AnimationCaller _animationCaller;
         [SerializeField] private UnityEvent StopRun;
+        [SerializeField] private UnityEvent Touch;
         [SerializeField] private int _maxCountTouch = 2;
         [SerializeField] private HpPanel _hpPanel;
 
@@ -43,6 +44,7 @@ namespace Player
                     _sideMovement.AbortMoving();
                     TouchCount++;
                     _hpPanel.RemoveOne();
+                    Touch?.Invoke();
                 }
                 _shaker.StartShake();
             }
