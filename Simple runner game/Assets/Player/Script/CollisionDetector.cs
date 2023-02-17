@@ -14,8 +14,8 @@ namespace Player
         [SerializeField] private LayerMask _layer;
         [SerializeField] private float _maxDistanceToGameOver = 1.2f;
         [SerializeField] private AnimationCaller _animationCaller;
-        [SerializeField] private UnityEvent StopRun;
-        [SerializeField] private UnityEvent Touch;
+        [SerializeField] private UnityEvent OnStopRun;
+        [SerializeField] private UnityEvent OnTouch;
         [SerializeField] private int _maxCountTouch = 2;
         [SerializeField] private HpPanel _hpPanel;
 
@@ -33,7 +33,7 @@ namespace Player
                 {
                     _runnerLauncher.StopRun();
                     _animationCaller.CallColiision();
-                    StopRun?.Invoke();
+                    OnStopRun?.Invoke();
                 }
                 else
                 {
@@ -44,7 +44,7 @@ namespace Player
                     _sideMovement.AbortMoving();
                     TouchCount++;
                     _hpPanel.RemoveOne();
-                    Touch?.Invoke();
+                    OnTouch?.Invoke();
                 }
                 _shaker.StartShake();
             }

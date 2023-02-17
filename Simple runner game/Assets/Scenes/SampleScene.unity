@@ -1406,7 +1406,7 @@ MonoBehaviour:
     m_Bits: 64
   _maxDistanceToGameOver: 1.2
   _animationCaller: {fileID: 1581399723}
-  StopRun:
+  OnStopRun:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5400845887567932937}
@@ -1434,7 +1434,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Touch:
+  OnTouch:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 339262694}
@@ -1480,8 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7080ae6b5f89d824a9c9c5cb9b9ce1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 1995711116}
-  Collect:
+  OnCollect:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 339262694}
@@ -1497,6 +1496,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _text: {fileID: 1995711116}
 --- !u!114 &339262693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,8 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9895096a56af6fa4f92d7552c3e6abc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collisionDetector: {fileID: 339262690}
-  Collect:
+  OnCollect:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 339262694}
@@ -1526,6 +1525,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _collisionDetector: {fileID: 339262690}
 --- !u!82 &339262694
 AudioSource:
   m_ObjectHideFlags: 0
