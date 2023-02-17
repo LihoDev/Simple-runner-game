@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Prop
 {
-    [CreateAssetMenu(fileName = "New Prop", menuName = "Obstacles/NewProp", order = 1)]
+    [CreateAssetMenu(fileName = "New PropProperties", menuName = "Obstacles/PropProperties", order = 1)]
     public class PropProperties : ScriptableObject
     {
         public Transform Prefab { get => _prefab; private set { _prefab = value; } }

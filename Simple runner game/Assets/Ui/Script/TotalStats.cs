@@ -1,4 +1,4 @@
-using Settings;
+using Data;
 using TMPro;
 using UnityEngine;
 

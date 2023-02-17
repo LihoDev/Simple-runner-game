@@ -1,4 +1,3 @@
-using Settings;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +7,7 @@ namespace Ui
     {
         [SerializeField] private Slider _music;
         [SerializeField] private Slider _soundEffects;
-        [SerializeField] private SaveData _saveData;
+        [SerializeField] private Settings _settings;
 
         public void ShowWindow()
         {
@@ -17,15 +16,14 @@ namespace Ui
 
         public void HideWindow()
         {
-            _saveData.SaveMusicValume(_music.value);
-            _saveData.SaveSoundEffectsValume(_soundEffects.value);
+            _settings.SaveAudioSettings(_music.value, _soundEffects.value);
             gameObject.SetActive(false);
         }
 
         private void Start()
         {
-            _music.value = _saveData.GetMusicValume();
-            _soundEffects.value = _saveData.GetSoundEffectsValume();
+            _music.value = _settings.GetMusicVolume();
+            _soundEffects.value = _settings.GetSoundEffectsVolume();
         }
     }
 }

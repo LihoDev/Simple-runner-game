@@ -18,7 +18,6 @@ public class RunnerLauncher : MonoBehaviour
 
     public void StopRun()
     {
-        _jumpMovement.StopMoving();
         _sideMovement.StopMoving();
         _forwardMovement.enabled = false;
         _swipeDetector.gameObject.SetActive(false);

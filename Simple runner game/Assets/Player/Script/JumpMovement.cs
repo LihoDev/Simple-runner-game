@@ -15,19 +15,26 @@ namespace Player
         [SerializeField] private LayerMask _ignoreLayer;
         [SerializeField] private Transform _camera;
         [SerializeField, Min(0)] private float _cameraMovingSpeed = 5;
+        [SerializeField] private AnimationCaller _animationCaller;
         private Coroutine _moving;
 
         public void Jump()
         {
             if (_moving == null)
+            {
+                _animationCaller.ResetStopAction();
                 _moving = StartCoroutine(MoveJumpCurve());
+                _animationCaller.CallJump();
+            }
         }
 
         public void Down()
         {
             if (_moving != null)
             {
+                _animationCaller.ResetStopAction();
                 StopCoroutine(_moving);
+                _animationCaller.CallDown();
                 _moving = StartCoroutine(MoveDown(_moveDownSpeed));
             }
         }
@@ -66,6 +73,7 @@ namespace Player
                 transform.localPosition = new Vector3(0, (newHieght < previousHieght) ? previousHieght : newHieght, 0);
                 yield return null;
             }
+            _animationCaller.CallStopAction();
             _moving = null;
             Idle = true;
         }
@@ -110,7 +118,11 @@ namespace Player
             if (_moving == null)
             {
                 if (GetDistanceGround() > 0.1f && transform.localPosition.y > 0)
+                {
+                    _animationCaller.ResetStopAction();
+                    _animationCaller.CallDown();
                     _moving = StartCoroutine(MoveDown(_jumpSpeed));
+                }
                 else
                     SetHeight();
             }

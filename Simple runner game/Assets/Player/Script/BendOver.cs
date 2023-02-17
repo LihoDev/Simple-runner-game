@@ -9,12 +9,15 @@ namespace Player
         [SerializeField, Min(0)] private float _bendOverTime;
         [SerializeField] private Vector3 _bendOverCollisionSize = Vector3.one;
         [SerializeField] private Coroutine _active;
+        [SerializeField] private AnimationCaller _animationCaller;
 
         public void StartBendOver()
         {
             if (_active != null)
                 StopCoroutine(_active);
+            _animationCaller.ResetStopAction();
             _active = StartCoroutine(BendOverTimer());
+            _animationCaller.CallBendOverStart();
         }
 
         public void StopBendOver()
@@ -23,6 +26,7 @@ namespace Player
             _active = null;
             transform.localScale = Vector3.one;
             Idle = true;
+            _animationCaller.CallStopAction();
         }
 
         private IEnumerator BendOverTimer()

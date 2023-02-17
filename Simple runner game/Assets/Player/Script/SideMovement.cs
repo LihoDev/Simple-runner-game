@@ -11,6 +11,7 @@ namespace Player
         [SerializeField, Min(1)] private int _countRoad;
         [SerializeField] private float _cameraOffset = 1;
         [SerializeField] private Transform _camera;
+        [SerializeField] private AnimationCaller _animationCaller;
         private int _currentRoad = 2;
         private int _previousRoad = 2;
         private Coroutine _transformMovement;
@@ -20,8 +21,10 @@ namespace Player
         {
             if (_currentRoad + 1 < _countRoad)
             {
+                _animationCaller.ResetStopAction();
                 _previousRoad = _currentRoad;
                 _currentRoad++;
+                _animationCaller.CallMoveRight();
                 StartMovement();
             }
         }
@@ -30,8 +33,10 @@ namespace Player
         {
             if (_currentRoad - 1 >= 0)
             {
+                _animationCaller.ResetStopAction();
                 _previousRoad = _currentRoad;
                 _currentRoad--;
+                _animationCaller.CallMoveLeft();
                 StartMovement();
             }
         }
@@ -71,6 +76,7 @@ namespace Player
                 moveObject.localPosition = Vector3.MoveTowards(moveObject.localPosition, target, _speed * Time.deltaTime);
                 yield return null;
             }
+            _animationCaller.CallStopAction();
         }
     }
 }
