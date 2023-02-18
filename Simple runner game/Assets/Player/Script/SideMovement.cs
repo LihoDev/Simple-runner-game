@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -21,11 +22,10 @@ namespace Player
         {
             if (_currentRoad + 1 < _countRoad)
             {
-                _animationCaller.ResetStopAction();
                 _previousRoad = _currentRoad;
                 _currentRoad++;
                 _animationCaller.CallMoveRight();
-                StartMovement();
+                StartMovement(delegate { _animationCaller.CallMoveRightStop(); });
             }
         }
 
@@ -33,11 +33,10 @@ namespace Player
         {
             if (_currentRoad - 1 >= 0)
             {
-                _animationCaller.ResetStopAction();
                 _previousRoad = _currentRoad;
                 _currentRoad--;
                 _animationCaller.CallMoveLeft();
-                StartMovement();
+                StartMovement(delegate { _animationCaller.CallMoveLeftStop(); });
             }
         }
 
@@ -49,17 +48,17 @@ namespace Player
         public void AbortMoving()
         {
             _currentRoad = _previousRoad;
-            StartMovement();
+            StartMovement(null);
         }
 
-        private void StartMovement()
+        private void StartMovement(UnityAction OnEnd)
         {
             if (_transformMovement != null)
                 StopCoroutine(_transformMovement);
             if (_cameraMovement != null)
                 StopCoroutine(_cameraMovement);
             float roadIndexValue = RoadIndexValue(_currentRoad);
-            _transformMovement = StartCoroutine(MoveToTarget(transform, new Vector3(roadIndexValue * _sideJumpDistance, 0, 0)));
+            _transformMovement = StartCoroutine(MoveToTarget(transform, new Vector3(roadIndexValue * _sideJumpDistance, 0, 0), OnEnd));
             _cameraMovement = StartCoroutine(MoveToTarget(_camera, new Vector3(roadIndexValue * _sideJumpDistance - (_sideJumpDistance / 2) * roadIndexValue / _cameraOffset,
                 _camera.localPosition.y, _camera.localPosition.z)));
         }
@@ -76,7 +75,12 @@ namespace Player
                 moveObject.localPosition = Vector3.MoveTowards(moveObject.localPosition, target, _speed * Time.deltaTime);
                 yield return null;
             }
-            _animationCaller.CallStopAction();
+        }
+
+        private IEnumerator MoveToTarget(Transform moveObject, Vector3 target, UnityAction OnEnd)
+        {
+            yield return MoveToTarget(moveObject, target);
+            OnEnd?.Invoke();
         }
     }
 }

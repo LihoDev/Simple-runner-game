@@ -22,7 +22,7 @@ namespace Player
         {
             if (_moving == null)
             {
-                _animationCaller.ResetStopAction();
+                _animationCaller.ResetDownStop();
                 _moving = StartCoroutine(MoveJumpCurve());
                 _animationCaller.CallJump();
             }
@@ -32,7 +32,7 @@ namespace Player
         {
             if (_moving != null)
             {
-                _animationCaller.ResetStopAction();
+                _animationCaller.ResetDownStop();
                 StopCoroutine(_moving);
                 _animationCaller.CallDown();
                 _moving = StartCoroutine(MoveDown(_moveDownSpeed));
@@ -73,7 +73,8 @@ namespace Player
                 transform.localPosition = new Vector3(0, (newHieght < previousHieght) ? previousHieght : newHieght, 0);
                 yield return null;
             }
-            _animationCaller.CallStopAction();
+            _animationCaller.ResetDownStop();
+            _animationCaller.CallDownStop();
             _moving = null;
             Idle = true;
         }
@@ -119,7 +120,7 @@ namespace Player
             {
                 if (GetDistanceGround() > 0.1f && transform.localPosition.y > 0)
                 {
-                    _animationCaller.ResetStopAction();
+                    _animationCaller.ResetDownStop();
                     _animationCaller.CallDown();
                     _moving = StartCoroutine(MoveDown(_jumpSpeed));
                 }

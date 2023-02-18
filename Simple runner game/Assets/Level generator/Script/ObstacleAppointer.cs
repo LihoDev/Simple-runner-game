@@ -110,11 +110,11 @@ namespace ObstacleGenerator
 
         private void ReturnInPool<T>(List<T> source, List<T> target) where T : InstantiatedProp
         {
-            foreach (T platform in source)
+            foreach (T prop in source)
             {
-                target.Add(platform);
-                platform.gameObject.SetActive(false);
-                platform.transform.parent = null;
+                target.Add(prop);
+                prop.gameObject.SetActive(false);
+                prop.transform.parent = null;
             }
         }
 

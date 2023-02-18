@@ -46,7 +46,7 @@ namespace ObstacleGenerator
             foreach (Transform prefab in _prefabs)
                 for (var i = 0; i < _maxCount; i++)
                 {
-                    Transform instance = Instantiate(prefab, new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity);
+                    Transform instance = Instantiate(prefab, new Vector3(0, 0, _lastSegmentPosition), Quaternion.identity, transform);
                     _instances.Add(instance);
                     instance.gameObject.SetActive(false);
                 }

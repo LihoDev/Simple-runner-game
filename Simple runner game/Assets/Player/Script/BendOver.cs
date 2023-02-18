@@ -15,7 +15,6 @@ namespace Player
         {
             if (_active != null)
                 StopCoroutine(_active);
-            _animationCaller.ResetStopAction();
             _active = StartCoroutine(BendOverTimer());
             _animationCaller.CallBendOverStart();
         }
@@ -26,7 +25,7 @@ namespace Player
             _active = null;
             transform.localScale = Vector3.one;
             Idle = true;
-            _animationCaller.CallStopAction();
+            _animationCaller.CallBendOverStop();
         }
 
         private IEnumerator BendOverTimer()
