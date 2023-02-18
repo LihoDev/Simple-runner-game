@@ -8,6 +8,7 @@ namespace Data
         [SerializeField] private string _scoreKey = "Score";
         [SerializeField] private string _musicVolumeKey = "Music";
         [SerializeField] private string _soundEffectsVolumeKey = "SoundEffects";
+        [SerializeField] private int _defaultVolumeValue = 0;
 
         public int GetCoins()
         {
@@ -31,7 +32,7 @@ namespace Data
 
         public float GetMusicVolume()
         {
-            return PlayerPrefs.GetFloat(_musicVolumeKey, 0.7f);
+            return PlayerPrefs.GetFloat(_musicVolumeKey, _defaultVolumeValue);
         }
 
         public void SaveMusicValume(float value)
@@ -41,7 +42,7 @@ namespace Data
 
         public float GetSoundEffectsVolume()
         {
-            return PlayerPrefs.GetFloat(_soundEffectsVolumeKey, 0.7f);
+            return PlayerPrefs.GetFloat(_soundEffectsVolumeKey, _defaultVolumeValue);
         }
 
         public void SaveSoundEffectsValume(float value)
@@ -52,10 +53,11 @@ namespace Data
         [ContextMenu("Clear data")]
         private void ClearData()
         {
-            SaveScore(0);
-            SaveCoins(0);
-            SaveMusicValume(0);
-            SaveSoundEffectsValume(0);
+            PlayerPrefs.DeleteAll();
+            //SaveScore(0);
+            //SaveCoins(0);
+            //SaveMusicValume(0);
+            //SaveSoundEffectsValume(0);
         }
     }
 }
