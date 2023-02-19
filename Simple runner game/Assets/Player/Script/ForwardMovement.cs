@@ -1,3 +1,4 @@
+using ObstacleGenerator;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,17 +11,24 @@ namespace Player
         [SerializeField] private float acceleration = 1.01f;
         [SerializeField] private AnimationCaller _animationCaller;
         [SerializeField] private float _maxDistanceToReset = 900000;
-        [SerializeField] private UnityEvent OnDistanceReset;
+        [SerializeField] private RoadReplacer _roadReplacer;
+        [SerializeField] private ObstacleAppointer _obstacleAppointer;
+        [SerializeField] private UnityEvent OnResetDistance;
 
         private void Update()
         {
             transform.Translate(CurrentSpeed * Time.deltaTime * transform.forward);
             CurrentSpeed += acceleration;
             if (transform.position.z > _maxDistanceToReset)
-            {
-                transform.position = Vector3.Scale(transform.position, new Vector3(1, 1, 0));
-                OnDistanceReset?.Invoke();
-            }
+                ResetDistance();
+        }
+
+        private void ResetDistance()
+        {
+            transform.position = Vector3.Scale(transform.position, new Vector3(1, 1, 0));
+            _roadReplacer.ResetDistance(_maxDistanceToReset);
+            _obstacleAppointer.ResetDistance(_maxDistanceToReset);
+            OnResetDistance?.Invoke();
         }
 
         private void Start()

@@ -41,6 +41,13 @@ namespace ObstacleGenerator
         private bool _turn;
         private float _lastSpeed;
 
+        public override void ResetDistance(float distance)
+        {
+            base.ResetDistance(distance);
+            for (var i = 0; i < _lastObstaclesPosition.Count; i++)
+                _lastObstaclesPosition[i] -= distance;
+        }
+
         protected override void ShowProps()
         {
             if (_instances[_rowIndex].TryGetComponent(out Row row))

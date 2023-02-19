@@ -4637,6 +4637,24 @@ MonoBehaviour:
   _startSpeed: 10
   acceleration: 0.0001
   _animationCaller: {fileID: 1581399723}
+  _maxDistanceToReset: 900000
+  _roadReplacer: {fileID: 432186156}
+  _obstacleAppointer: {fileID: 432186162}
+  OnResetDistance:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5032279682334697559}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1190494861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,17 +5695,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3392292e26de2294db8dea8aa1444284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parameterStartRun: StartRun
-  _parameterDrink: Drink
-  _parameterBendOverStart: BendOver_Start
-  _parameterColiision: Coliision
-  _parameterCollisionLeft: Collision_Left
-  _parameterCollisionRight: Collision_Right
-  _parameterStopAction: StopAction
-  _parameterMoveLeft: Move_Left
-  _parameterMoveRight: Move_Right
-  _parameterJump: Jump
-  _parameterDown: Down
+  _startRun: StartRun
+  _drink: Drink
+  _coliision: Coliision
+  _collisionLeft: Collision_Left
+  _collisionRight: Collision_Right
+  _bendOverStart: BendOver_Start
+  _bendOverStop: BendOver_Stop
+  _moveLeft: Move_Left
+  _moveLeftStop: Move_Left_Stop
+  _moveRight: Move_Right
+  _moveRightStop: Move_Right_Stop
+  _jump: Jump
+  _down: Down
+  _downStop: Down_Stop
 --- !u!1 &1689938033
 GameObject:
   m_ObjectHideFlags: 0

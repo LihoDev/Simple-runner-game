@@ -19,6 +19,14 @@ namespace ObstacleGenerator
         [SerializeField] private float _fierstIndent = 0;
         [SerializeField] private List<Transform> _prefabs = new List<Transform>();
 
+        public virtual void ResetDistance(float distance)
+        {
+            _lastSegmentPosition -= distance;
+            _oldPlayerDistance -= distance;
+            foreach (Transform instance in _instances)
+                instance.position -= new Vector3(0, 0, distance);
+        }
+
         protected virtual void Start()
         {
             InstantiatePrefabs();

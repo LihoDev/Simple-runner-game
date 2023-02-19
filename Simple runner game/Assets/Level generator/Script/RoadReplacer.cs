@@ -7,6 +7,13 @@ namespace ObstacleGenerator
     {
         private List<Transform> _useRoad = new List<Transform>();
 
+        public override void ResetDistance(float distance)
+        {
+            base.ResetDistance(distance);
+            foreach (Transform road in _useRoad)
+                road.position -= new Vector3(0, 0, distance);
+        }
+
         protected override void PlaceProps()
         {
             if (_rowIndex != -1)
